@@ -459,7 +459,8 @@ alors faites en bonne usage car ils pourrait vous relevez très utile pour votre
                                                    .^~~!7?J?77!7???J?~^^7??7!!7?7^^7^:!JJJJJYYYYY555555P5Y??JJYJJY5YYYJJJ?JYYYJJJ?7?7777!?JJ?77~!?JJYJ??7??77JYYY5J?7?JY5P55YJ??7!~!7?7777?JJ?:         
                                                                             ....        ....::..:::::::::.        ......   .:::::^^:......::::...:^^:..        .....:::^^~^^::.     .......:.           
                                                                                                                                                                                                         
-                       Console.WriteLine(""Edvars de Ragn - Peut-etre un Ent.....Si c'est le cas, je devrais préparer une huile contre les arbroides et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort ignis"");                                                                                                                                                                                 ");
+                                                                                                                                                                                                      ");
+                    Console.WriteLine("Edvars de Ragn - Peut-etre un Ent.....Si c'est le cas, je devrais préparer une huile contre les arbroides et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort igni");
                     
                     break;
                 case "Malédiction":

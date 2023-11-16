@@ -1,35 +1,37 @@
-﻿using ProjetNarratif.Rooms;
+﻿using ProjetNarratif.Quests;
+using System.Diagnostics;
+using System.Threading;
 
 namespace ProjetNarratif
 {
     internal class Game
     {
-        List<Room> rooms = new();
-        Room currentRoom;
+        List<Quest> quests = new();
+        Quest currentQuest;
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
-        static string nextRoom = "";
+        static string nextQuest = "";
 
-        internal void Add(Room room)
+        internal void Add(Quest quest)
         {
-            rooms.Add(room);
-            if (currentRoom == null)
+            quests.Add(quest);
+            if (currentQuest == null)
             {
-                currentRoom = room;
+                currentQuest = quest;
             }
         }
 
-        internal string CurrentRoomDescription => currentRoom.CreateDescription();
+        internal string CurrentQuestDescription => currentQuest.CreateDescription();
 
         internal void ReceiveChoice(string choice)
         {
-            currentRoom.ReceiveChoice(choice);
+            currentQuest.ReceiveChoice(choice);
             CheckTransition();
         }
 
-        internal static void Transition<T>() where T : Room
+        internal static void Transition<T>() where T : Quest
         {
-            nextRoom = typeof(T).Name;
+            nextQuest = typeof(T).Name;
         }
 
         internal static void Finish()
@@ -39,15 +41,17 @@ namespace ProjetNarratif
 
         internal void CheckTransition()
         {
-            foreach (var room in rooms)
+            foreach (var quest in quests)
             {
-                if (room.GetType().Name == nextRoom)
+                if (quest.GetType().Name == nextQuest)
                 {
-                    nextRoom = "";
-                    currentRoom = room;
+                    nextQuest = "";
+                    currentQuest = quest;
                     break;
                 }
             }
+     
         }
     }
+
 }

@@ -100,10 +100,10 @@ De plus, le vent s'était levé, brouillant la posibilité de suivre un piste pa
                                 Console.WriteLine("4");
                                 Thread.Sleep(1000);
                                 Console.WriteLine("5");
-                                DateTime DateC = DateTime.Now;
+                                timer.Start();
                                 attaque = Convert.ToString(Console.ReadLine());
-                                DateTime DateD = DateTime.Now;
-                                TimeSpan re = DateD.Subtract(DateC);
+                                timer.Stop();
+                                TimeSpan re = timer.Elapsed;
                                 double ret = re.TotalSeconds;
                                 if(ret < 5)
                                 {
@@ -136,12 +136,11 @@ De plus, le vent s'était levé, brouillant la posibilité de suivre un piste pa
                                             Console.WriteLine("4");
                                             Thread.Sleep(1000);
                                             Console.WriteLine("5");
-                                            DateTime DateE = DateTime.Now;
+                                            timer.Start();
                                             boubou = Convert.ToString(Console.ReadLine());
-                                            DateTime DateF = DateTime.Now;
-                                            TimeSpan sum = DateF.Subtract(DateE);
+                                            timer.Stop();
+                                            TimeSpan sum = timer.Elapsed;
                                             double summ = sum.TotalSeconds;
-                                            if (summ < 5)
                                             {
                                                 switch (boubou)
                                                 {
@@ -199,10 +198,10 @@ De plus, le vent s'était levé, brouillant la posibilité de suivre un piste pa
                                         Console.WriteLine("4");
                                         Thread.Sleep(1000);
                                         Console.WriteLine("5");
-                                        DateTime DateE = DateTime.Now;
+                                        timer.Start();
                                         boubou = Convert.ToString(Console.ReadLine());
-                                        DateTime DateF = DateTime.Now;
-                                        TimeSpan sum = DateF.Subtract(DateE);
+                                        timer.Stop();
+                                        TimeSpan sum = timer.Elapsed;
                                         double summ = sum.TotalSeconds;
                                         if (summ < 5)
                                         {
@@ -269,10 +268,10 @@ De plus, le vent s'était levé, brouillant la posibilité de suivre un piste pa
                             Console.WriteLine("4");
                             Thread.Sleep(1000);
                             Console.WriteLine("5");
-                            DateTime DateE = DateTime.Now;
+                            timer.Start();
                             boubou = Convert.ToString(Console.ReadLine());
-                            DateTime DateF = DateTime.Now;
-                            TimeSpan sum = DateF.Subtract(DateE);
+                            timer.Stop();
+                            TimeSpan sum = timer.Elapsed;
                             double summ = sum.TotalSeconds;
                             if (summ < 5)
                             {

@@ -19,6 +19,8 @@ game.Add(new Combat());
 game.Add(new Dilemme());
 game.Add(new Epargner());
 game.Add(new Sacrifier());
+game.Add(new Combat2());
+game.Add(new Combat3());
 
 while (!game.IsGameOver())
 {

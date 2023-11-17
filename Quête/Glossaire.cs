@@ -307,6 +307,7 @@ alors faites en bonne usage car ils pourrait vous relevez très utile pour votre
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#YJJJJJJJJJJJJJJJJJJJYYP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
                             Console.WriteLine("Edvars de Ragn - Peut-etre une Zoruva.....Si c'est le cas, je devrais préparer une huile contre les elven et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort ignis");
+                            Game.Transition<Combat2>();
                             break;
                     }
                     
@@ -461,7 +462,8 @@ alors faites en bonne usage car ils pourrait vous relevez très utile pour votre
                                                                                                                                                                                                         
                                                                                                                                                                                                       ");
                     Console.WriteLine("Edvars de Ragn - Peut-etre un Ent.....Si c'est le cas, je devrais préparer une huile contre les arbroides et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort igni");
-                    
+                    Game.Transition<Combat3>();
+
                     break;
                 case "Malédiction":
                     string bete = "";

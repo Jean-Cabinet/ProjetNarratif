@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Combat3 : Quest
+    internal class Combat5 : Quest
     {
-        internal static int PvEdvars = 50;
+        internal static int PvEdvars = 20;
 
-        internal static int PvLeshen = 20;
+        internal static int PvLeshen = 60;
 
 
         public static Random random = new Random();

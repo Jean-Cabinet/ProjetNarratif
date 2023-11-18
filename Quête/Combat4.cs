@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Combat3 : Quest
+    internal class Combat4 : Quest
     {
-        internal static int PvEdvars = 50;
+        internal static int PvEdvars = 20;
 
-        internal static int PvLeshen = 20;
+        internal static int PvLeshen = 60;
 
 
         public static Random random = new Random();
@@ -18,7 +18,7 @@ namespace ProjetNarratif.Quête
 @"Edvars de ragn - Bon......les indices prete à croire que c'est une Ent qui n'est pas très content que l'on exploite sa forêt.
   Edvars de ragn - Je finir de me préparer pour le combattre, et je vais essayer de répéter la scène d'attaque des bûcherons en tapant avec cette hache sur un arbre.
    Après avoir finir d'huilé l'arme et fait la méditation pour le renforcement des sorts, edvars agrippa la hache laisser par un bûcheron et commença à couper le tronc d'un arbre.
- Guère de temps après, il entendu le bruit du monstre, ce n'était pas un Ent mais un leshen. Impossible de faire marche arrière. Edvars aggrippa son arme et se lanca à son rencontre pour le tuer."
+ Guère de temps après, il entendu le bruit du monstre, ce n'était pas un loup - garou mais un leshen. Impossible de faire marche arrière. Edvars aggrippa son arme et se lanca à son rencontre pour le tuer."
   ;
 
         internal override void ReceiveChoice(string choice)
@@ -101,7 +101,7 @@ namespace ProjetNarratif.Quête
                         Console.WriteLine("Le leshen prit de plein fouet le sort de edvars mais eu le temps de lancée une volée de corbeaux qui entailla notre héros ");
                         Console.WriteLine("Le leshen étant très sensible au feu souffre de dégats de brûlure");
                         Console.WriteLine($"Edvars possède {PvEdvars} point de vie");
-                        PvEdvars = PvEdvars - 5;
+                        PvEdvars = PvEdvars - 15;
                         PvLeshen = PvLeshen - 3;
                         brûlure = true;
 
@@ -250,7 +250,7 @@ namespace ProjetNarratif.Quête
 
             } while (PvEdvars != 0 || PvLeshen != 0);
 
-            Game.Transition<Dilemme>();
+            Game.Transition<Fin_alternatif>();
 
 
         }

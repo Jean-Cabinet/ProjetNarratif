@@ -693,7 +693,7 @@ GP5?JG#@@@@@@@@&&#GYP#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&BGGYJ7~^:.
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&^                                                                                                                                                  ");
 
                             Console.WriteLine("Edvars de Ragn - Peut-etre un Aflelim.....Si c'est le cas, je devrais préparer une huile contre les Alfi et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort Yrden");
-                            Game.Transition<Combat4>();
+                            Game.Transition<Combat5>();
                             break;
 
                     }

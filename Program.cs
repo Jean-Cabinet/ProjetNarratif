@@ -21,6 +21,8 @@ game.Add(new Epargner());
 game.Add(new Sacrifier());
 game.Add(new Combat2());
 game.Add(new Combat3());
+game.Add(new Combat4());
+game.Add(new Fin_alternatif());
 
 while (!game.IsGameOver())
 {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Boss2 : Quest
+    internal class Combat2 : Quest
     {
 
         internal static int PvEdvars = 50;
@@ -36,7 +36,7 @@ namespace ProjetNarratif.Quête
                 }
 
 
-                int choiceLeshen = new Random().Next(1, 5);
+                int choiceLeshen = new Random().Next(2, 5);
                 //2 = défense
                 //3 = attaque griffe/nuée corbeau
                 //4 = riposte

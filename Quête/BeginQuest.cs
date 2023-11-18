@@ -4,7 +4,7 @@ namespace ProjetNarratif.Quests
 {
     internal class BeginQuest : Quest
     {
-        
+        //ajout mécanique RPG niveaux sacrifice et épargnement + iventaire + bourse + etc
         internal override string CreateDescription() =>
 @"////////////////////////////////////////PROLOGUE///////////////////////////////////////////////////////////////////
 Jadis, notre monde se mêla à un autre, lors d'un cataclysme que les érudits

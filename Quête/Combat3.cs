@@ -35,7 +35,7 @@ namespace ProjetNarratif.Quête
                 }
 
 
-                int choiceLeshen = new Random().Next(1, 5);
+                int choiceLeshen = new Random().Next(2, 5);
                 //2 = défense
                 //3 = attaque griffe/nuée corbeau
                 //4 = riposte

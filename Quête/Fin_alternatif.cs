@@ -11,9 +11,9 @@ namespace ProjetNarratif.Quête
     {
         internal override string CreateDescription() =>
   @"                                         VOUS ETES MORT
-Edvars avait le présentitiment que son erreur dans l'identification du monstre, pourrais lui coter la vie.........
+Edvars avait le présentiment que son erreur dans l'identification du monstre, pourrais lui coter la vie.........
  Je pensais que vous auriez été meilleure.......Ce n'est pas comme ça que vous allez tuer Aldagusar voyons.......
-  reprenons à la page Glossaire et tachez de bien choisir";
+  reprenons à la page Glossaire et tâchez de bien choisir le Leshen";
 
         internal override void ReceiveChoice(string choice)
         {

@@ -1,4 +1,5 @@
 ﻿using ProjetNarratif.Quests;
+using ProjetNarratif.Quête;
 using System.Diagnostics;
 using System.Threading;
 
@@ -21,11 +22,14 @@ namespace ProjetNarratif
             }
         }
 
+        public Edvars player = new Edvars();
+        public Leshen monstre = new Leshen();
+
         internal string CurrentQuestDescription => currentQuest.CreateDescription();
 
         internal void ReceiveChoice(string choice)
         {
-            currentQuest.ReceiveChoice(choice);
+            currentQuest.ReceiveChoice(choice,player);
             CheckTransition();
         }
 

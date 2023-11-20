@@ -25,10 +25,23 @@ namespace ProjetNarratif.Quête
             this.PointexperienceSacrifice = 0;
             this.inventaire = new Inventaire();
             this.inventaire.Add(new Flamberge("Gwynbleidd", "flamberge", 12));
+            this.inventaire.Add(new Hirondelle("Hironedlle","Soin",50));
+            this.inventaire.Add(new Huileleshi("huileleshi", "combat", 10));
+            this.inventaire.Add(new Huilezoruna("huilezoruna", "combat", 10));
+            this.inventaire.Add(new Huilealfi("huilealfi", "combat", 10));
+            this.inventaire.Add(new Huileent("huileent", "combat", 10));
+            this.inventaire.Add(new Huilelycan("huilelycan", "combat", 10));
+            this.inventaire.Sub(new Flamberge("Gwynbleidd", "flamberge", 12));
+            this.inventaire.Sub(new Hirondelle("Hironedlle", "Soin", 50));
+            this.inventaire.Sub(new Huileleshi("huileleshi", "combat", 10));
+            this.inventaire.Sub(new Huilezoruna("huilezoruna", "combat", 10));
+            this.inventaire.Sub(new Huilealfi("huilealfi", "combat", 10));
+            this.inventaire.Sub(new Huileent("huileent", "combat", 10));
+            this.inventaire.Sub(new Huilelycan("huilelycan", "combat", 10));
 
-                            
-         }   
-        }
+
+        }   
+         }
 
 
 

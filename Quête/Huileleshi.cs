@@ -6,24 +6,17 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Huiles : Item
+    internal class Huileleshi : Item
     {
-        public int huileleshi = 0;
-        public int huileelven = 0;
-        public int huileent = 0;
-        public int huilelycan = 0;
-        public int huilealfi = 0;
+        public int huileleshi = 10;
+       
 
-        public Huiles(string name, string type, int huileleshi, int huileelven, int huileent, int huilelycan, int huilealfi)
+        public Huileleshi(string name, string type, int huileleshi)
         {
             this.name = name;
             this.type = type;
             this.huileleshi = huileleshi;
-            this.huileent = huileent;
-            this.huileelven = huileelven;
-            this.huilelycan = huilelycan;
-            this.huilealfi = huilealfi;
-            
+           
 
         }
 

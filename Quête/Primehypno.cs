@@ -17,7 +17,7 @@ Tout bon Croiseleur se doit de évoquer la question de la prime, peut importe le
 
 
 
-        internal override void ReceiveChoice(string choice)
+        internal override void ReceiveChoice(string choice, Edvars e)
         {
             switch (choice)
             {

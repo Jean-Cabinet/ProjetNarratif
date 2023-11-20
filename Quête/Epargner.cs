@@ -16,7 +16,7 @@ namespace ProjetNarratif.Quête
  Régisse chèvre - Tenez voici votre prime.[Pr]
  ";
 
-        internal override void ReceiveChoice(string choice)
+        internal override void ReceiveChoice(string choice, Edvars e)
         {
             switch (choice)
             {

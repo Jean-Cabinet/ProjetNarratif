@@ -15,14 +15,14 @@ namespace ProjetNarratif.Quête
             public int levelSacrifice { get; set; }
             public int levelEpargner { get; set; }
             public Inventaire inventaire {  get; set; } 
-         public Edvars() 
-         { 
+         public Edvars()
+        { 
             this.PVEdvars = 50;
             this.Gold = 10;
             this.levelEpargner = 1;
             this.levelSacrifice = 1;
             this.PointexperienceSacrifice = 0;
-            this.PointexperienceSacrifice = 0;
+            this.PointexperienceEpargner = 0;
             this.inventaire = new Inventaire();
             this.inventaire.Add(new Flamberge("Gwynbleidd", "flamberge", 12));
             this.inventaire.Add(new Hirondelle("Hironedlle","Soin",50));
@@ -38,10 +38,27 @@ namespace ProjetNarratif.Quête
             this.inventaire.Sub(new Huilealfi("huilealfi", "combat", 10));
             this.inventaire.Sub(new Huileent("huileent", "combat", 10));
             this.inventaire.Sub(new Huilelycan("huilelycan", "combat", 10));
-
-
-        }   
          }
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
 
 
 

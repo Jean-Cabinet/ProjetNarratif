@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Huileent
+    internal class Huileent : Item
     {
+        public int huileent = 10;
+
+
+        public Huileent(string name, string type, int huileent)
+        {
+            this.name = name;
+            this.type = type;
+            this.huileent = huileent;
+
+
+        }
+
+
+
+
+
     }
 }

@@ -22,13 +22,12 @@ Vous etes un tout nouveaux croiseleurs, vous etes affecté à votre toutes premi
  Edvard de Ragn - [menace], [sort], [lui dire bon vent]";
 
 
-        internal override void ReceiveChoice(string choice)
+        internal override void ReceiveChoice(string choice,Edvars e)
         {
             switch (choice)
             {
                 case "menace":
                     Console.WriteLine(" Edvard de Ragn - Si je serais vous, je parlerais sur un autre ton, si vous ne voulez pas que votre tete me serve de récompense en plus de ma prime.");
-
                     Console.WriteLine(" Régisse Chèvre - oh doucement, c'était une petit blague de rien du tout, et oui c'est moi qui est déposé de contrat, vous allez nous en débarrasser n'est-ce pas ?");
                     Thread.Sleep(1000);
                     Console.WriteLine(" Edvard de Ragn - très bien, dites moi ce que vous savez sur cette attaque (je me suis laisser un peu emporté, évitons de mentionner la prime maintenant, j'ai besoin de se travail).");

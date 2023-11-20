@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetNarratif.Quête;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ Tout bon Croiseleur se doit de évoquer la question de la prime, et oui les temp
 
  Edvard de Ragn - Disons [100 écu] de plus, pour le manque d'acceuil";
 
-        internal override void ReceiveChoice(string choice)
+        internal override void ReceiveChoice(string choice, Edvars e)
         {
             switch (choice)
             {

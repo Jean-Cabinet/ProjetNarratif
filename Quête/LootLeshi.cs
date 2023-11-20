@@ -6,22 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Huilealfi : Item
+    internal class LootLeshi : Item
     {
-        public int huilealfi = 10;
 
-
-        public Huilealfi(string name, string type, int huilealfi)
+        public LootLeshi(string name,string type) 
         {
             this.name = name;
             this.type = type;
-            this.huilealfi = huilealfi;
 
 
         }
-
-
-
 
     }
 }

@@ -14,7 +14,7 @@ namespace ProjetNarratif.Quests
 alors faites en bonne usage car ils pourrait vous relevez très utile pour votre combat finale................
 ";
         
-        internal override void ReceiveChoice(string choice)
+        internal override void ReceiveChoice(string choice, Edvars e)
         {
             Console.WriteLine("Edvars de Ragn - Commençons par choisir un type : [Reliques] , [Malédiction] ");
             switch (choice)

@@ -8,7 +8,7 @@ namespace ProjetNarratif.Quête
 {
     internal class Huilelycan : Item
     {
-        public int huilelycan = 0;
+        public int huilelycan = 10;
 
 
         public Huilelycan(string name, string type, int huilelycan)

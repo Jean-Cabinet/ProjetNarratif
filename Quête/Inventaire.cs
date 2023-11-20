@@ -32,6 +32,8 @@ namespace ProjetNarratif.Quête
             inventaire.ForEach(i => Console.WriteLine(i.name));
         }
 
+        
+
 
         
     }

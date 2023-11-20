@@ -21,7 +21,7 @@ namespace ProjetNarratif.Quête
  Guère de temps après, il entendu le bruit du monstre, ce n'était pas un loup - garou mais un leshen. Impossible de faire marche arrière. Edvars aggrippa son arme et se lanca à son rencontre pour le tuer."
   ;
 
-        internal override void ReceiveChoice(string choice)
+        internal override void ReceiveChoice(string choice, Edvars e)
         {
             do
             {

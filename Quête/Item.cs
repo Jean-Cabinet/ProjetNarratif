@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Item
+    internal abstract class Item
     {
+        public string name { get; set; }
+        public string type { get; set; }
+
     }
+
+
 }

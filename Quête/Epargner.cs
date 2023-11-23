@@ -12,8 +12,8 @@ namespace ProjetNarratif.Quête
   @"Edvars se rendit au village pour récupérer sa prime.
  Régisse chèvre - Alors, vous avez abattu le monstre ?  
  Edvars de Ragn -  Oui, elle ne vous embêtera plus.
- Régisse chèvre - ahah, finalement vous etes plus sympathique vous autres
- Régisse chèvre - Tenez voici votre prime.[Pr]
+ Régisse chèvre - ahah, finalement vous etes plutot sympathique vous autres
+ Régisse chèvre - Tenez, voici votre prime.[Pr]
  ";
 
         internal override void ReceiveChoice(string choice, Edvars e, Leshen l)

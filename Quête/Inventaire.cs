@@ -11,9 +11,9 @@ namespace ProjetNarratif.Quête
     {
         public List<Item> inventaire = new();
 
-        public Inventaire() 
-        { 
-         
+        public Inventaire()
+        {
+
 
         }
 

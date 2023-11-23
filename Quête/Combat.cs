@@ -66,7 +66,7 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars bondit sur le leshen pour lui asséner un coup de flamberge...");
                             Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                             Console.WriteLine("Le leshen para l'attaque en la deviant avec son bras");
-                            l.PVLeshen = l.PVLeshen - 2;
+                            l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                         }
                         if (AttaqueEdvars == "Ignis")
                         {

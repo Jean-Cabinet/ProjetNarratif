@@ -32,7 +32,8 @@ De plus, le vent s'était levé, brouillant la posibilité de suivre un piste pa
             switch (choice)
             {
                 case "forêt":
-                    Console.WriteLine("Edvars de Ragn - L'odeur des cadavres ne m'avait pas manqué, espèrons que ça n'a pas attiré de nécrophages. humm...difficile de se fier à mes sens d'odorats pour trouver la piste du camp");
+                    Console.WriteLine(@"Edvars de Ragn - L'odeur des cadavres ne m'avait pas manqué, espèrons que ça n'a pas attiré de nécrophages. 
+                     humm...difficile de se fier à mes sens d'odorats pour trouver la piste du camp");
                     Thread.Sleep(1000);
                     Console.WriteLine("Edvars de Ragn - J'apperçois des traces de [sang] au loin et des [griffures] sur les tronc");
                     if (griffure)

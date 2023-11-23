@@ -39,11 +39,11 @@ Edvars de Ragn - J'ai peur de comprendre ce que ça signifie.....
 
                 case "E":
 
-                    Console.WriteLine("Edvars se baissa au niveau de l'homme et à l'aide son bras, il lui influa une énergie blanche");
+                    Console.WriteLine("Edvars se baissa au niveau de l'homme et à l'aide son épée, il lui influa une énergie blanche");
                     Thread.Sleep(2000);
                     Console.WriteLine("L'homme se releva et remercia edvars");
                     Console.WriteLine("??????- Merci, comme puis-je vous remerciez ?");
-                    Console.WriteLine("Edvars ne répondit et se retourna pour aller chercher sa prime");
+                    Console.WriteLine("Edvars ne répondit pas et se retourna pour aller chercher sa prime");
                     Game.Transition<Epargner>();
 
                     break;

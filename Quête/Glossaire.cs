@@ -14,7 +14,7 @@ namespace ProjetNarratif.Quests
 alors faites en bonne usage car ils pourrait vous relevez très utile pour votre combat finale................
 ";
         
-        internal override void ReceiveChoice(string choice, Edvars e)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
         {
             Console.WriteLine("Edvars de Ragn - Commençons par choisir un type : [Reliques] , [Malédiction] ");
             switch (choice)
@@ -307,6 +307,8 @@ alors faites en bonne usage car ils pourrait vous relevez très utile pour votre
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#YJJJJJJJJJJJJJJJJJJJYYP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
                             Console.WriteLine("Edvars de Ragn - Peut-etre une Zoruva.....Si c'est le cas, je devrais préparer une huile contre les elven et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort ignis");
+                            Console.WriteLine(@"Si le leshen est un esprit de la foret, la zoruna en est la reine. Résistant au fer, elle est capable de lancre des plumes aiguisé comme un rasoir pour taillader sa cible. 
+                               De plus, elle peut créer des trounades ou envoyé des pissenlits explosif sur sa cible. Elle possède aussi de long griffes acérés qui laisse des entailles précises sur les corps. Elle ne tue que par plaisir et ne dévore pas ses cibles.");
                             Game.Transition<Combat2>();
                             break;
                     }
@@ -462,12 +464,13 @@ alors faites en bonne usage car ils pourrait vous relevez très utile pour votre
                                                                                                                                                                                                         
                                                                                                                                                                                                       ");
                     Console.WriteLine("Edvars de Ragn - Peut-etre un Ent.....Si c'est le cas, je devrais préparer une huile contre les arbroides et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort igni");
+                    Console.WriteLine(@"Tout comme le leshen, les ent sont des esprits de la foret, il sont capable au vu de leur taille d'écrabouiller sa cible. Ils sont capable de contrôler la nature et de s'en servir comme d'une arme");
                     Game.Transition<Combat3>();
 
                     break;
                 case "Malédiction":
                     string bete = "";
-                    Console.WriteLine("[Loup-garou],[Aflelim]");
+                    Console.WriteLine("[Ulfhedinn],[Aflelim]");
                     switch (bete)
                     {
                         case "Loup-garou":
@@ -562,6 +565,8 @@ alors faites en bonne usage car ils pourrait vous relevez très utile pour votre
                                                                                                                                         .G!   .Y    .                                                   
                                                                                                                                          ..                                                             ");
                             Console.WriteLine("Edvars de Ragn - Peut-etre un Loup-garou.....Si c'est le cas, je devrais préparer une huile contre les lycans et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort frosti");
+                            Console.WriteLine(@"Les Ulfhedinn sont des monstres féroces capables d'un régénération sans précédent, ses griffes sons assérés comme des couperets.
+                             Ils essayeront la pluspart du temps de vous surpendre en vous fonçant dessus avec leur grande rapidité pour vous asséner le coup fatal. On retrouve généralement que quelque osements après leurs passage ");
                             Game.Transition<Combat4>(); 
                             break;
 
@@ -693,6 +698,8 @@ GP5?JG#@@@@@@@@&&#GYP#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&BGGYJ7~^:.
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&^                                                                                                                                                  ");
 
                             Console.WriteLine("Edvars de Ragn - Peut-etre un Aflelim.....Si c'est le cas, je devrais préparer une huile contre les Alfi et enduire mon arme, ainsi qu'un renforcement contre ses attaques et du sort Yrden");
+                            Console.WriteLine(@"Les Aflelim, sont des créatures qui attaquent généralement en groupe, ils tirent leurs force dans leurs nombres. Ils vont frapper et griffer
+                             leur victimes jusqu'a la mort. Ils sont très agiles et capables d'esquiver facilement les attaques leur laissant moultes opportunitées pour riposter.");
                             Game.Transition<Combat5>();
                             break;
 

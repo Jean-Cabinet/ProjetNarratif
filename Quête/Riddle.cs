@@ -41,7 +41,7 @@ De plus, le vent s'était levé, brouillant la posibilité de suivre un piste pa
                     }
 
                     break;
-                case "Sang":
+                case "sang":
                     Console.WriteLine("Edvars de Ragn - nous y voilà,mais je ne suis pas seul visiblement , voy....");
                     Thread.Sleep(500);
                     Console.WriteLine("A peine, il eut le temps de se pencher sur une preuve, qu'il se fit attaquer par deux nécrophage.Il esquiva avec une roulade parfaitement executé pour avoir les deux [goules] dans son champ de vision");

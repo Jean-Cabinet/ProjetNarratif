@@ -59,7 +59,7 @@ De plus, le vent s'était levé, brouillant la posibilité de suivre un piste pa
                     break;
 
                 case "goules":
-
+                    
                     Console.WriteLine("Edvars de Ragn - Ce sont des goules, j'aurais du m'en douter que les cadavres les attiraient.");
                     Thread.Sleep(1500);
                     Console.WriteLine("Les goules décidairent d'attaquer en coordonnant leur coups de griffes.");

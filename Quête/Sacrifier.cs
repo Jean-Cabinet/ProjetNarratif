@@ -58,7 +58,7 @@ Edvars tomba au sol en prenant la tete entre les se mains et cria. [repousser] l
                         Console.WriteLine("Régisse chèvre - Vous allez bien monsieur ?");
                         Thread.Sleep(2500);
                         Console.WriteLine("Edvars de Ragn - *soupir* *se releva*, merci, bon vent à vous");
-                        Console.WriteLine(" le villageois fut déconensé par ce qu'il venait d'assister, il observa avec un air abasourdit edvars s'éloigner avec son cheval");
+                        Console.WriteLine(" le villageois fut décontenansé par ce qu'il venait d'assister, il observa avec un air abasourdit edvars s'éloigner avec son cheval");
 
                     }
                     if(resu > 2)

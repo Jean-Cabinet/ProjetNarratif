@@ -29,7 +29,7 @@ namespace ProjetNarratif
 
         internal void ReceiveChoice(string choice)
         {
-            currentQuest.ReceiveChoice(choice,player);
+            currentQuest.ReceiveChoice(choice,player,monstre);
             CheckTransition();
         }
 

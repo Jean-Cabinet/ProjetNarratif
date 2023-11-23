@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class VillageS
+    internal class VillageS : Quest
     {
+        internal override string CreateDescription() =>
+       @"";
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
+        {
+
+
+
+
+
+        }
+
+
+
+
     }
 }

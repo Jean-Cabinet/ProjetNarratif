@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-        internal class Edvars
-        {    
+    internal class Edvars
+    {
         public Flamberge Gwynbleidd { get; set; }
         public int PVEdvars { get; set; }
         public int Bourse { get; set; }
@@ -17,13 +17,13 @@ namespace ProjetNarratif.Quête
         public int levelEpargner { get; set; }
         public int AttaqueGwynbleidd { get; set; }
         public int Attaqueignis { get; set; }
-        public int Attaquefrostis {  get; set; }
-        public int Attaqueyrden {  get; set; }
-        public int méditation {  get; set; }
+        public int Attaquefrostis { get; set; }
+        public int Attaqueyrden { get; set; }
+        public int méditation { get; set; }
         public int défenseEdvars { get; set; }
-        public int riposteEdvars {  get; set; }  
-        
-        public int brulureIgnis { get; set; }   
+        public int riposteEdvars { get; set; }
+        public int brulureIgnis { get; set; }
+        public int bonusmedi { get; set; }
         public Inventaire inventaire { get; set; }
         public Edvars()
         {
@@ -41,6 +41,7 @@ namespace ProjetNarratif.Quête
             this.défenseEdvars = 10;
             this.riposteEdvars = 10;
             this.brulureIgnis = 2;
+            this.bonusmedi = 2;
             this.inventaire = new Inventaire();
             this.inventaire.Add(new Flamberge("Gwynbleidd", "flamberge", 12));
             this.inventaire.Add(new Hirondelle("Hironedlle", "Soin", 12));
@@ -49,9 +50,9 @@ namespace ProjetNarratif.Quête
             this.inventaire.Add(new Huilealfi("huilealfi", "combat", -5));
             this.inventaire.Add(new Huileent("huileent", "combat", 1));
             this.inventaire.Add(new Huilelycan("huilelycan", "combat", -5));
-            this.inventaire.Add(new Florinprime(150, 0, "primehypno", "florin"));
-            this.inventaire.Add(new Florinprime(0, 100, "prime", "florin"));
-
+            this.inventaire.Add(new Florinprime(150, 0, 0, "primehypno", "florin"));
+            this.inventaire.Add(new Florinprime(0, 50, 0, "prime", "florin"));
+            this.inventaire.Add(new Florinprime(0, 0, 80, "primequete", "florin"));
 
         }
 
@@ -226,8 +227,8 @@ namespace ProjetNarratif.Quête
 
         }
 
-         public bool Prime()
-         {
+        public bool Prime()
+        {
 
             foreach (Item item in inventaire.inventaire)
             {
@@ -246,16 +247,40 @@ namespace ProjetNarratif.Quête
 
 
 
-         }
+        }
 
-         public int RenforcementIgnis()
-         {
+        public bool Primequete()
+        {
+
+            foreach (Item item in inventaire.inventaire)
+            {
+                if (item is Florinprime)
+                {
+
+                    Bourse = Bourse + ((Florinprime)item).primequete;
+                    inventaire.Sub(item);
+                    Console.WriteLine($" Vous possédez maintenant {Bourse} florins");
+                    return true;
+                }
+
+            }
+            Console.WriteLine("Vous n'avez choisir l'option prime lors de la négotiation");
+            return false;
+
+        }
+
+
+        public int RenforcementIgnis()
+        {
+
             Attaqueignis = Attaqueignis + méditation;
+            brulureIgnis = brulureIgnis + bonusmedi;
             Console.WriteLine($"La puissance de votre signe est augmenter {Attaqueignis}");
+
 
             return Attaqueignis;
 
-         }
+        }
 
         public int RenforcementFrostis()
         {
@@ -288,10 +313,10 @@ namespace ProjetNarratif.Quête
 
 
 
-        }
+    }
 
 
 
 
-    
+
 }

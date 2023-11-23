@@ -17,7 +17,7 @@ Tout bon Croiseleur se doit de évoquer la question de la prime, peut importe le
 
 
 
-        internal override void ReceiveChoice(string choice, Edvars e)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
         {
             switch (choice)
             {
@@ -26,6 +26,7 @@ Tout bon Croiseleur se doit de évoquer la question de la prime, peut importe le
                     Console.WriteLine("Régisse chèvre - très bien, les voici");
                     Thread.Sleep(1000);
                     Console.WriteLine(" Edvard de Ragn - Merci bien.");
+                    e.Primesort();
                     Game.Transition<Riddle>();
                     
 

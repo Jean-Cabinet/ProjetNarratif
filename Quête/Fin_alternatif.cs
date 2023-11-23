@@ -15,7 +15,7 @@ Edvars avait le présentiment que son erreur dans l'identification du monstre, p
  Je pensais que vous auriez été meilleure.......Ce n'est pas comme ça que vous allez tuer Aldagusar voyons.......
   reprenons à la page Glossaire et tâchez de bien choisir le Leshen";
 
-        internal override void ReceiveChoice(string choice, Edvars e)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
         {
             Game.Transition<Glossaire>();
 

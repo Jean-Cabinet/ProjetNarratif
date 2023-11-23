@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Village
+    internal class VillageEpargner
     {
+
+
+
+
     }
 }

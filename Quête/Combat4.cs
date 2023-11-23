@@ -117,9 +117,8 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                             Console.WriteLine("Le leshen esquiva l'attaque d'edvars, puis avec un coup de griffe répliqua");
                             Console.WriteLine("Edvars fut projeter avec puissance sur un arbre, il cracha du sang puis se releva");
-                            Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
                             e.PVEdvars = e.PVEdvars - l.riposteLeshen;
-
+                            Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
                         }
                         if (AttaqueEdvars == "Ignis")
                         {

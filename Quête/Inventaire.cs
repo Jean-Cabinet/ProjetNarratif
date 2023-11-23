@@ -9,7 +9,7 @@ namespace ProjetNarratif.Quête
 {
     internal class Inventaire
     {
-        List<Item> inventaire = new();
+        public List<Item> inventaire = new();
 
         public Inventaire() 
         { 

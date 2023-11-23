@@ -15,7 +15,7 @@ namespace ProjetNarratif.Quests
 
 ";
 
-        internal override void ReceiveChoice(string choice, Edvars e)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
         {
             switch (choice)
             {      
@@ -29,7 +29,7 @@ namespace ProjetNarratif.Quests
                     }
                     if(cadavre == true)
                     {
-                        Console.WriteLine("Edvars de Ragn - Je redevrais retourner au camp, l'examen de ce cadavre ne m'a rine apporté");
+                        Console.WriteLine("Edvars de Ragn - Je redevrais retourner au camp, l'examen de ce cadavre ne m'a rien apporté");
                         Game.Transition<SuiteRiddle>();
                         
                     }

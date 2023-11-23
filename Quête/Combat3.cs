@@ -67,7 +67,7 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars bondit sur le leshen pour lui asséner un coup de flamberge...");
                             Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                             Console.WriteLine("Le leshen para l'attaque en la deviant avec son bras");
-                            l.PVLeshen = l.PVLeshen - 2;
+                            l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                         }
                         if (AttaqueEdvars == "Ignis")
                         {
@@ -117,9 +117,8 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                             Console.WriteLine("Le leshen esquiva l'attaque d'edvars, puis avec un coup de griffe répliqua");
                             Console.WriteLine("Edvars fut projeter avec puissance sur un arbre, il cracha du sang puis se releva");
+                            e.PVEdvars = e.PVEdvars - l.riposteLeshen;
                             Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
-                            e.PVEdvars = e.PVEdvars - 2;
-
                         }
                         if (AttaqueEdvars == "Ignis")
                         {
@@ -144,7 +143,7 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Le leshen esquiva l'attaque d'edvars, puis avec un coup de griffe répliqua");
                             Console.WriteLine("Edvars fut projeter avec puissance sur un arbre, il cracha du sang puis se releva");
                             e.PVEdvars = e.PVEdvars - l.riposteLeshen;
-                            l.PVLeshen = l.PVLeshen - 2;
+                            l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                             Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
                         }
                         if (AttaqueEdvars == "Ignis")

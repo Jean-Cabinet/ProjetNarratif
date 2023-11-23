@@ -16,7 +16,7 @@ Tout bon Croiseleur se doit de évoquer la question de la prime, et oui les temp
 
  Edvard de Ragn - Disons [100 écu] de plus, pour le manque d'acceuil";
 
-        internal override void ReceiveChoice(string choice, Edvars e)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
         {
             switch (choice)
             {
@@ -24,13 +24,14 @@ Tout bon Croiseleur se doit de évoquer la question de la prime, et oui les temp
 
                     Console.WriteLine("Régisse chèvre - Vous rigolez, c'est toutes mes économies, je préfère appeler quelqu'un d'autre que vous si vous ne baissez pas");
                     Thread.Sleep(1000);
-                    Console.WriteLine(" Edvard de Ragn - Très bien passons, je ne plus me fatigué avec vous, va [50 écu]");
+                    Console.WriteLine(" Edvard de Ragn - Très bien passons, je ne veux plus me fatigué avec vous, va pour [50 écu]");
 
 
                     break;
                 case "50 écu":
 
                     Console.WriteLine("Régisse chèvre - Marché conclu, ma foie");
+                    e.Prime();
                     Game.Transition<Pnj>();
 
                     break;

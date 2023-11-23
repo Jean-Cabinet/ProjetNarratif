@@ -8,7 +8,7 @@ namespace ProjetNarratif.Quête
 {
     internal class Huileleshi : Item
     {
-        public int huileleshi = 10;
+        public int huileleshi = 5;
        
 
         public Huileleshi(string name, string type, int huileleshi)

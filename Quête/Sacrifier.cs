@@ -33,7 +33,7 @@ Edvars tomba au sol en prenant la tete entre les se mains et cria. [repousser] l
                     Console.WriteLine("Régisse chèvre - Vous allez bien  ?");
                     Console.WriteLine("Edvars de Ragn - AAHAHAHAHAHAHAH, tout en se tenant la tete dans les mains");
                     Thread.Sleep(2000);
-                    Console.WriteLine("Attention, vous allez devoir appuyer plusieurs fois sur votretouche entrée");
+                    Console.WriteLine("Attention, vous allez devoir appuyer plusieurs fois sur votre touche entrée");
                     Console.ReadKey();
                     Console.WriteLine("1");
                     Thread.Sleep(1000);
@@ -59,8 +59,8 @@ Edvars tomba au sol en prenant la tete entre les se mains et cria. [repousser] l
                         Thread.Sleep(2500);
                         Console.WriteLine("Edvars de Ragn - *soupir* *se releva*, merci, bon vent à vous");
                         Console.WriteLine(" le villageois fut décontenansé par ce qu'il venait d'assister, il observa avec un air abasourdit edvars s'éloigner avec son cheval");
-                        Game.Transition<VillageS>();
                         e.Primequete();
+                        Game.Transition<VillageS>();
 
                     }
                     if(resu > 2)
@@ -75,7 +75,10 @@ Edvars tomba au sol en prenant la tete entre les se mains et cria. [repousser] l
                         Console.WriteLine("Il s'était transformé en cerbères, détruisant le village au quel il avait accepté le contrat");
                         Console.WriteLine("Voilà ce qui arrive lorsque que l'on est faible, on se transforme en monstre");
                         Console.WriteLine(" et à son tour, il sera chasser et de nouveaux un chasseur tombera probablement dans la folie");
-
+                        Console.WriteLine(@"         VOUS ETES MORT
+   C'est bien beau de sacrifier des monstres mais si c'est pour en devenir un ce n'est pas la peine.......
+  Je pensais que vous auriez été meilleure.......Ce n'est pas comme ça que vous allez tuer Aldagusar voyons.......
+  ");
                         Game.Finish();
                     }
 

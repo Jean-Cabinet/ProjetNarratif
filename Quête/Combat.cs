@@ -9,23 +9,21 @@ namespace ProjetNarratif.Quête
 {
     internal class Combat : Quest
     {
-        internal static int PvEdvars = 50;
-
-        internal static int PvLeshen = 20;
-
-
         public static Random random = new Random();
         internal override string CreateDescription() =>
 @"Edvars de ragn - Bon......les indices prete à croire que c'est un leshen qui n'est pas très content que l'on exploite sa forêt.
-  Edvars de ragn - Je finir de me préparer pour le combattre, et je vais essayer de répéter la scène d'attaque des bûcherons en tapant avec cette hache sur un arbre.
-   Après avoir finir d'huilé l'arme et fait la méditation pour le renforcement des sorts, edvars agrippa la hache laisser par un bûcheron et commença à couper le tronc d'un arbre.
- Guère de temps, après il entendu le bruit du monstre, c'éatit un leshen comme comvenu. Edvars aggrippa son arme et se lanca à son rencontre pour le tuer."
+  Edvars de ragn - Je vais finir de me préparer pour le combattre, et je vais essayer de répéter la scène d'attaque des bûcherons en tapant avec cette hache sur un arbre.
+   Après avoir finir d'huilé l'arme et fait la méditation pour le renforcement du sort ignis, edvars agrippa la hache laisser par un bûcheron et commença à couper le tronc d'un arbre.
+ Guère de temps, après il entendu le bruit du monstre, c'était un leshen comme comvenu. Edvars aggrippa son arme et se lanca à son rencontre pour le tuer."
   ;
 
-        internal override void ReceiveChoice(string choice, Edvars e)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
         {
             do
             {
+                
+                e.UseHuileleshi();
+                e.RenforcementIgnis();
                 bool brûlure = false;
                 string AttaqueEdvars = "";
                 Console.WriteLine("Que voulez-vous faire ?[Attaque],[Sort Bouclier],[Riposte]");
@@ -68,14 +66,14 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars bondit sur le leshen pour lui asséner un coup de flamberge...");
                             Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                             Console.WriteLine("Le leshen para l'attaque en la deviant avec son bras");
-                            PvLeshen = PvLeshen - 1;
+                            l.PVLeshen = l.PVLeshen - 2;
                         }
                         if (AttaqueEdvars == "Ignis")
                         {
                             Console.WriteLine("Edvars élança son bras et l'avant est lança le sort ignis");
                             Console.WriteLine("Edvars de Ragn - Ignis");
                             Console.WriteLine("Le leshen se dématérialisé en corbeau pour esquiver le sort et téléporta à un autre endroit");
-                            PvLeshen = PvLeshen - 1;
+                            l.PVLeshen = l.PVLeshen - e.brulureIgnis;
 
                         }
                     }
@@ -90,9 +88,9 @@ namespace ProjetNarratif.Quête
                         Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                         Console.WriteLine("Le leshen répliqua avec un coup de griffe");
                         Console.WriteLine("les deux protagonistes s'en resortent avec des blessures");
-                        Console.WriteLine($"Edvars possède {PvEdvars} point de vie");
-                        PvEdvars = PvEdvars - 10;
-                        PvLeshen = PvLeshen - 10;
+                        e.PVEdvars = e.PVEdvars - (l.griffures- e.défenseEdvars);
+                        l.PVLeshen = l.PVLeshen - (e.AttaqueGwynbleidd - l.défenseLeshen);
+                        Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
                     }
                     if (AttaqueEdvars == "Ignis")
                     {
@@ -101,9 +99,9 @@ namespace ProjetNarratif.Quête
                         Console.WriteLine("Edvars de Ragn - Ignis");
                         Console.WriteLine("Le leshen prit de plein fouet le sort de edvars mais eu le temps de lancée une volée de corbeaux qui entailla notre héros ");
                         Console.WriteLine("Le leshen étant très sensible au feu souffre de dégats de brûlure");
-                        Console.WriteLine($"Edvars possède {PvEdvars} point de vie");
-                        PvEdvars = PvEdvars - 5;
-                        PvLeshen = PvLeshen - 5;
+                        e.PVEdvars = e.PVEdvars - (l.nuéecorbeaux - e.défenseEdvars);
+                        l.PVLeshen = l.PVLeshen - (e.Attaqueignis - l.défenseLeshen);
+                        Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
                         brûlure = true;
 
                     }
@@ -118,8 +116,8 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                             Console.WriteLine("Le leshen esquiva l'attaque d'edvars, puis avec un coup de griffe répliqua");
                             Console.WriteLine("Edvars fut projeter avec puissance sur un arbre, il cracha du sang puis se releva");
-                            Console.WriteLine($"Edvars possède {PvEdvars} point de vie");
-                            PvEdvars = PvEdvars - 2;
+                            e.PVEdvars = e.PVEdvars - l.riposteLeshen;
+                            Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
 
                         }
                         if (AttaqueEdvars == "Ignis")
@@ -129,8 +127,8 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars de Ragn - Ignis");
                             Console.WriteLine("Le leshen se dématérialisé en corbeau pour esquiver le sort et téléporta derrière edvars puis lui lança une nuée de corbeaux");
                             Console.WriteLine("ceci destabilisa edvars et le blessa ");
-                            Console.WriteLine($"Edvars possède {PvEdvars} point de vie");
-                            PvEdvars = PvEdvars - 2;
+                            e.PVEdvars = e.PVEdvars - l.riposteLeshen;
+                            Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
 
 
 
@@ -144,9 +142,9 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                             Console.WriteLine("Le leshen esquiva l'attaque d'edvars, puis avec un coup de griffe répliqua");
                             Console.WriteLine("Edvars fut projeter avec puissance sur un arbre, il cracha du sang puis se releva");
-                            Console.WriteLine($"Edvars possède {PvEdvars} point de vie");
-                            PvEdvars = PvEdvars - 2;
-                            PvLeshen = PvLeshen - 1;
+                            e.PVEdvars = e.PVEdvars - l.riposteLeshen ;
+                            l.PVLeshen = l.PVLeshen - e.brulureIgnis;
+                            Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
                         }
                         if (AttaqueEdvars == "Ignis")
                         {
@@ -155,9 +153,9 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Edvars de Ragn - Ignis");
                             Console.WriteLine("Le leshen se dématérialisé en corbeau pour esquiver le sort et téléporta derrière edvars puis lui lança une nuée de corbeaux");
                             Console.WriteLine("ceci destabilisa edvars et le blessa ");
-                            Console.WriteLine($"Edvars possède {PvEdvars} point de vie");
-                            PvEdvars = PvEdvars - 2;
-                            PvLeshen = PvLeshen - 1;
+                            e.PVEdvars = e.PVEdvars - l.riposteLeshen;
+                            l.PVLeshen = l.PVLeshen - e.brulureIgnis;
+                            Console.WriteLine($"Edvars possède {e.PVEdvars} point de vie");
 
 
 
@@ -174,7 +172,7 @@ namespace ProjetNarratif.Quête
                     if(brûlure == true)
                     {
                         Console.WriteLine("Edvars et le Leshen se regarda dans le blanc des yeux attendant que l'un face le premier pas");
-                        PvLeshen = PvLeshen - 1;
+                        l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                     }
 
                 }
@@ -188,7 +186,7 @@ namespace ProjetNarratif.Quête
                     if(brûlure== true)
                     {
                         Console.WriteLine("Le bouclier d'edvars absorba les attaques du leshen, sans aucun problème");
-                        PvLeshen = PvLeshen - 1;
+                        l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                     }
                 }
                 if(choice =="Sort Bouclier"&& choiceLeshen == 4)
@@ -201,7 +199,7 @@ namespace ProjetNarratif.Quête
                     if(brûlure == true) 
                     {
                         Console.WriteLine("Le leshen resta sur ses gardes pret à riposter toutes éevntualité d'attaque de la prt d'edvars.");
-                        PvLeshen = PvLeshen - 1;
+                        l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                     }
                 }
 
@@ -214,7 +212,7 @@ namespace ProjetNarratif.Quête
                     if(brûlure == true)
                     {
                         Console.WriteLine("Edvars observa chaque recoin, chaque mouvement pour espérer enterevoir une opportunité de riposté, mais le leshen resta sur la défensive");
-                        PvLeshen = PvLeshen - 1;
+                        l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                     }
 
 
@@ -225,13 +223,13 @@ namespace ProjetNarratif.Quête
                     if (brûlure == false)
                     {
                         Console.WriteLine("Edvars vit avec rapidité l'attaque du leshen, puis avec agilité, il esquiva pour se replacer et asséner un coup d'épée dans le flan du monstre");
-                        PvLeshen = PvLeshen - 12;
+                        l.PVLeshen = l.PVLeshen - e.riposteEdvars;
                     }
                     if(brûlure == true)
                     {
                         Console.WriteLine("Edvars vit avec rapidité l'attaque du leshen, puis avec agilité, il esquiva pour se replacer et asséner un coup d'épée dans le flan du monstre");
-                        PvLeshen = PvLeshen - 12;
-                        PvLeshen = PvLeshen - 1;
+                        l.PVLeshen = l.PVLeshen - e.riposteEdvars;
+                        l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                     }
                 }
                 if (choice == "Riposte" && choiceLeshen == 4)
@@ -243,13 +241,13 @@ namespace ProjetNarratif.Quête
                     if(brûlure== true)
                     {
                         Console.WriteLine("tout deux restèrent sur ses gardes pret à riposter toutes éventualité d'attaque.");
-                        PvLeshen = PvLeshen - 1;
+                        l.PVLeshen = l.PVLeshen - e.brulureIgnis;
                     }
                 }
 
 
 
-            } while(PvEdvars !=0||PvLeshen !=0);
+            } while(e.PVEdvars != 0|| l.PVLeshen != 0);
 
             Game.Transition<Dilemme>();
 

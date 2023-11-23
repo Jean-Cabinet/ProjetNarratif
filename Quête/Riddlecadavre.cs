@@ -18,7 +18,7 @@ namespace ProjetNarratif.Quête
  Examiner le [corps]
  Regarder [autour] du corps";
 
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
         {
             switch (choice)
             {

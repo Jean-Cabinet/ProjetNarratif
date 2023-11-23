@@ -17,7 +17,7 @@ namespace ProjetNarratif.Quête
  Guère de temps, après il entendu le bruit du monstre, c'était un leshen comme comvenu. Edvars aggrippa son arme et se lanca à son rencontre pour le tuer."
   ;
 
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
         {
             do
             {

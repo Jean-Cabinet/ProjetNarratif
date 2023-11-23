@@ -26,7 +26,7 @@ Edvars de Ragn - Il ne m'a guère appris ce maraud.
 Une fois arrivé à [forêt],Edvars décendit de son cheval, l'odeur de vielle charogne décomposé, enivra les narives de notre Croiseleur.
 De plus, le vent s'était levé, brouillant la posibilité de suivre un piste par l'odorat";
 
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
         {
             string choix = "";
             switch (choice)

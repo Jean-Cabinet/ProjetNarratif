@@ -17,7 +17,7 @@ namespace ProjetNarratif.Quête
          les pousse ans leur derniers retranchement.
          Edvars de Ragn -  Gwynbleidd.....elle a pris une teinte blanchâtre, rayonne avec un légère intensité.
          Edvars de Ragn - Je devrais me reposer ce combat m'a épuisé, allons à l'[auberge] dans ce village.";
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
         {
             switch (choice)
             {

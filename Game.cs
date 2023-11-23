@@ -24,12 +24,12 @@ namespace ProjetNarratif
 
         public Edvars player = new Edvars();
         public Leshen monstre = new Leshen();
-
+        public Nécrophages bestioles = new Nécrophages();
         internal string CurrentQuestDescription => currentQuest.CreateDescription();
 
         internal void ReceiveChoice(string choice)
         {
-            currentQuest.ReceiveChoice(choice,player,monstre);
+            currentQuest.ReceiveChoice(choice,player,monstre,bestioles);
             CheckTransition();
         }
 

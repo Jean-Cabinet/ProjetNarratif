@@ -10,7 +10,7 @@ namespace ProjetNarratif.Quests
 @"Après avoir, négocier une prime ou devoir détendre l'atmosphere, Edvard posa des questions sur la nature de [l'attaque].
 ";
 
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
         {
             switch (choice)
             {

@@ -22,7 +22,7 @@ Vous etes un tout nouveaux croiseleurs, vous etes affecté à votre toutes premi
  Edvard de Ragn - [menace], [sort], [lui dire bon vent]";
 
 
-        internal override void ReceiveChoice(string choice,Edvars e, Leshen l)
+        internal override void ReceiveChoice(string choice,Edvars e, Leshen l, Nécrophages n)
         {
             switch (choice)
             {

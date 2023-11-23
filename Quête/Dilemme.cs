@@ -18,7 +18,7 @@ Edvars de Ragn - J'ai peur de comprendre ce que ça signifie.....
 [S],[E]
 ";
 
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
         {
             switch (choice)
             {

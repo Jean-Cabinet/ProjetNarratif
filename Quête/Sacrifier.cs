@@ -24,7 +24,7 @@ LES VOIX DANS VOTRE TETE S'INTENSIFIE VOUS ENTENDEZ LES CRIS DE L'HOMME BOURDONN
 Edvars tomba au sol en prenant la tete entre les se mains et cria. [repousser] les voix";
 
 
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
         {
             switch (choice)
             {

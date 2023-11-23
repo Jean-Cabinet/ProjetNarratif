@@ -24,7 +24,7 @@ LES VOIX DANS VOTRE TETE S'INTENSIFIE VOUS ENTENDEZ LES CRIS DE L'HOMME BOURDONN
 Edvars tomba au sol en prenant la tete entre les se mains et cria. [repousser] les voix";
 
 
-        internal override void ReceiveChoice(string choice, Edvars e)
+        internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
         {
             switch (choice)
             {
@@ -59,6 +59,7 @@ Edvars tomba au sol en prenant la tete entre les se mains et cria. [repousser] l
                         Thread.Sleep(2500);
                         Console.WriteLine("Edvars de Ragn - *soupir* *se releva*, merci, bon vent à vous");
                         Console.WriteLine(" le villageois fut décontenansé par ce qu'il venait d'assister, il observa avec un air abasourdit edvars s'éloigner avec son cheval");
+                        e.Primequete();
 
                     }
                     if(resu > 2)

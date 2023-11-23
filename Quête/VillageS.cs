@@ -17,7 +17,15 @@ namespace ProjetNarratif.Quête
         internal override void ReceiveChoice(string choice, Edvars e, Leshen l)
         {
 
+            switch (choice)
+            {
+                case "auberge":
 
+
+
+                    break;
+
+            }
 
 
 

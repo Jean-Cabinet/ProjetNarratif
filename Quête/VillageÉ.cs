@@ -44,7 +44,7 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Tavernier - Désolé... mais vous ne pouvez pas rester ici, cela risque d'effrayer mes clients");
                             Thread.Sleep(2000);
                             Console.WriteLine("Edvars de Ragn - très bien, bon vent");
-                            
+                            Game.Transition<CampementE>();
 
                             break;
 

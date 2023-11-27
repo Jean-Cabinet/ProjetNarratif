@@ -26,6 +26,7 @@ namespace ProjetNarratif.Quête
                     e.Primequete();
                     Console.WriteLine("Il savait très bien que épargner un monstre, faisait de lui un renégat qui sera poursuit par des membres de sa propre guilde pour toucher la mise à prix");
                     Console.WriteLine("Edvars monta à dos de son cheval pour atteindre le prochain village pour résoudre une nouvellle contrat, en tant que rénégat et non Croiseleurs");
+                    Game.Transition<VillageÉ>();
                     
                     break;
 

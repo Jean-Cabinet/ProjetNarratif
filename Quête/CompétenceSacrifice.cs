@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class CompétenceSacrifice
+    internal class CompétenceSacrifice : Compétences
     {
+        public CompétenceSacrifice(string name,string description, int attaquecomp)
+        {
+            this.name = name;
+            this.description = description;
+            this.attaquecomp = attaquecomp;
+
+        }
+
+        public void Éxecuter(Ennemis E,Edvars C)
+        {
+            Console.WriteLine("Edvars");
+            E.PV = E.PV - this.attaquecomp;
+
+
+        }
+
+
+
+
     }
 }

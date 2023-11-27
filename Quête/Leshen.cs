@@ -21,7 +21,7 @@ namespace ProjetNarratif.Quête
             this.nuéecorbeaux = 17;
             this.défense = 10;
             this.riposte = 10;
-
+            this.expérience = 100;
         }
 
 

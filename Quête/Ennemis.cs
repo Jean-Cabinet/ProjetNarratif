@@ -16,7 +16,9 @@ namespace ProjetNarratif.Quête
 
         public int défense { get; set; }
 
-        public int riposte { get; set; }    
+        public int riposte { get; set; }
+        
+        public int expérience { get; set; } 
 
 
 

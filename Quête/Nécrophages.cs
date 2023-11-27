@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Nécrophages
+    internal class Nécrophages : Ennemis
     {
-        public int PVnécrophages { get; set; }
-        public int griffures { get; set; }    
+        
+         
         public Nécrophages()
         {
-            this.PVnécrophages = 30;
-            this.griffures = 5;
+            this.PV = 30;
+            this.attaque = 5;
+            this.expérience = 10;
+
         }
 
 

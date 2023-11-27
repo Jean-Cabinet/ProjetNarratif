@@ -20,7 +20,7 @@ namespace ProjetNarratif.Quête
         {
             Console.WriteLine("Edvars");
             E.PV = E.PV - this.attaquecomp;
-
+            E.défense = E.défense - 10;
 
         }
 

@@ -8,6 +8,7 @@ namespace ProjetNarratif.Quête
 {
     internal class Edvars
     {
+        public int absorptionquen {  get; set; }
         public Compétences compétences {  get; set; }
         public Flamberge Gwynbleidd { get; set; }
         public int PVEdvars { get; set; }
@@ -28,6 +29,7 @@ namespace ProjetNarratif.Quête
         public Inventaire inventaire { get; set; }
         public Edvars()
         {
+            this.absorptionquen = 50;
             this.PVEdvars = 50;
             this.Bourse = 10;
             this.levelEpargner = 1;
@@ -35,8 +37,8 @@ namespace ProjetNarratif.Quête
             this.PointexperienceSacrifice = 0;
             this.PointexperienceEpargner = 0;
             this.AttaqueGwynbleidd = 10;
-            this.Attaqueignis = 2;
-            this.Attaquefrostis = 2;
+            this.Attaqueignis = 5;
+            this.Attaquefrostis = 5;
             this.Attaqueyrden = 2;
             this.méditation = 10;
             this.défenseEdvars = 10;
@@ -105,12 +107,12 @@ namespace ProjetNarratif.Quête
         }
 
 
-        public bool UseHuileleshi()
+        public bool UseHuileleshi(Leshen l)
         {
             foreach (Item item in inventaire.inventaire)
             {
-                Leshen l = new Leshen();
-                l.défenseLeshen = l.défenseLeshen - 5;
+                
+                l.défense = l.défense - 5;
                 if (item is Huileleshi)
                 {
 
@@ -163,12 +165,12 @@ namespace ProjetNarratif.Quête
 
         }
 
-        public bool UseHuilelycan()
+        public bool UseHuilelycan(Leshen l)
         {
             foreach (Item item in inventaire.inventaire)
             {
-                Leshen l = new Leshen();
-                l.défenseLeshen = l.défenseLeshen + 15;
+                
+                l.défense = l.défense + 15;
                 if (item is Huilelycan)
                 {
 
@@ -184,12 +186,12 @@ namespace ProjetNarratif.Quête
 
         }
 
-        public bool UseHuilealfi()
+        public bool UseHuilealfi(Leshen l)
         {
             foreach (Item item in inventaire.inventaire)
             {
-                Leshen l = new Leshen();
-                l.défenseLeshen = l.défenseLeshen + 15;
+                
+                l.défense = l.défense + 15;
                 if (item is Huilealfi)
                 {
 
@@ -303,11 +305,21 @@ namespace ProjetNarratif.Quête
 
         public void Afficherstat()
         {
-            Console.WriteLine("");
+            
 
 
         }
 
+        public void niveauxsacrifice(Ennemis E)
+        {
+            
+          //  if ()
+               {
+
+               }
+
+
+        }
 
 
 

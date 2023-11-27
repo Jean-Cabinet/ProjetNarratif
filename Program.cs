@@ -24,6 +24,8 @@ game.Add(new Combat3());
 game.Add(new Combat4());
 game.Add(new Combat5());
 game.Add(new Fin_alternatif());
+game.Add(new AubergeE());
+game.Add(new AubergeS());
 
 while (!game.IsGameOver())
 {

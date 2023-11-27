@@ -14,7 +14,7 @@ namespace ProjetNarratif.Quête
          qu'il fournissait à l'école des croiseleurs et que lui avait décidé de prendre une flamberge.
          Edvars de Ragn - Tuer et ne pas succomber......hmm ça prends du sens maintenant
          Edvars de Ragn - Je devrais me reposer ce combat m'a épuisé, allons à l'[auberge] dans ce village.";
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
+        internal override void ReceiveChoice(string choice, Edvars e)
         {
 
             switch (choice)

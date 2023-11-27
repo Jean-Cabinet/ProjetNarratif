@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Leshen : Edvars
+    internal class Leshen : Ennemis
     {
 
-        public int PVLeshen { get; set; }
-        public int griffures { get; set; }
+        
+       
         public int nuéecorbeaux { get; set; }
-        public int défenseLeshen {  get; set; }
-
-        public int riposteLeshen {  get; set; }   
+        
 
         public Leshen()
         {
-            this.PVLeshen = 50;
-            this.griffures = 15;
+            this.PV = 50;
+            this.attaque = 15;
             this.nuéecorbeaux = 17;
-            this.défenseLeshen = 10;
-            this.riposteLeshen = 10;
+            this.défense = 10;
+            this.riposte = 10;
 
         }
 

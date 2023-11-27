@@ -16,7 +16,7 @@ namespace ProjetNarratif.Quête
  Sur le sol, on remarque plusieurs flaques de sang qui mènent vers un [cadavre].
  On peut remarquer sur les arbres des [entailles]";
 
-        internal override void ReceiveChoice(string choice, Edvars e, Leshen l, Nécrophages n)
+        internal override void ReceiveChoice(string choice, Edvars e)
         {
             switch (choice)
             {

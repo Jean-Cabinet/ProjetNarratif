@@ -8,6 +8,7 @@ namespace ProjetNarratif.Quête
 {
     internal class Edvars
     {
+        public Compétences compétences {  get; set; }
         public Flamberge Gwynbleidd { get; set; }
         public int PVEdvars { get; set; }
         public int Bourse { get; set; }
@@ -300,6 +301,12 @@ namespace ProjetNarratif.Quête
 
         }
 
+        public void Afficherstat()
+        {
+            Console.WriteLine("");
+
+
+        }
 
 
 

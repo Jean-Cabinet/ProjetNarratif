@@ -24,7 +24,7 @@ namespace ProjetNarratif.Quête
             Leshen l = new Leshen();
             do
             {
-                e.UseHuilealfi();
+                e.UseHuilealfi(l);
                 e.RenforcementYrden();
                 bool brûlure = false;
                 string AttaqueEdvars = "";

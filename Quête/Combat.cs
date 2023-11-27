@@ -23,7 +23,7 @@ namespace ProjetNarratif.Quête
             do
             {
                 
-                e.UseHuileleshi();
+                e.UseHuileleshi(l);
                 e.RenforcementIgnis();
                 bool brûlure = false;
                 string AttaqueEdvars = "";

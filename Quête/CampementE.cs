@@ -21,8 +21,11 @@ namespace ProjetNarratif.Quête
 
         internal override void ReceiveChoice(string choice, Edvars e)
         {
+            Renégat r = new Renégat();
+
             switch (choice)
             {
+               
                 case "combat":
 
                     e.levelEpargner = e.levelEpargner + 1;
@@ -34,14 +37,142 @@ namespace ProjetNarratif.Quête
                     e.compétences = new CompétenceSacrifice("Jugement destinée", @"libère  le pouvoir des purificateur dans son arme, en plongeant l'épée dans le sol pour invoquer une myriade de lames. 
                      En plus d'infliger des dégâts immédiats, cette attaque augmente la défense du personnage pendant un long moment.", 20);
                     Console.WriteLine($"Vous apprenez une nouvelle Jugement destinée : {e.compétences} ");
-                    Thread.Sleep(2000); 
+                    Thread.Sleep(2000);
+
+                    do
+                    {
+
+                        
+                        string AttaqueEdvars = "";
+                        Console.WriteLine("Que voulez-vous faire ?[Attaque],[Sort Bouclier],[Riposte],[Hirondelle]");
+                        if (choice == "Attaque")
+                        {
+                            Console.WriteLine("Que voulez-vous faire ?[Coupépée],[Jugement destinée]");
+                            AttaqueEdvars = Convert.ToString(Console.ReadLine());
+                        }
+
+                        int choiceRenégat = new Random().Next(2, 6);//changer
+                                                                   //2 = défense
+                                                                   //3 = Attaque
+                                                                   //4 = sort
+                                                                   //5 = riposte
+
+                        if (choice == "Attaque" && choiceRenégat == 2)
+                        {
+                           if (choice == "Coupépée")
+                           {
+
+                           }
+                           if (choice == "Jugement destinée")
+                           {
+
+                           }
 
 
+                        }
+                        if (choice == "Attaque" && choiceRenégat == 3)
+                        {
+                            if (choice == "Coupépée")
+                            {
+
+                            }
+                            if (choice == "Jugement destinée")
+                            {
+
+                            }
+
+                        }
+                        if (choice == "Attaque" && choiceRenégat == 4)
+                        {
+                            if (choice == "Coupépée")
+                            {
+
+                            }
+                            if (choice == "Jugement destinée")
+                            {
+
+                            }
 
 
+                        }
+                        if (choice == "Attaque" && choiceRenégat == 5)
+                        {
+                            if (choice == "Coupépée")
+                            {
+
+                            }
+                            if (choice == "Jugement destinée")
+                            {
+
+                            }
 
 
+                        }
 
+                        if (choice == "Sort Bouclier" && choiceRenégat == 2)
+                        {
+                            
+
+                        }
+                        if (choice == "Sort Bouclier" && choiceRenégat == 3)
+                        {
+
+                            
+                        }
+                        if (choice == "Sort Bouclier" && choiceRenégat == 4)
+                        {
+
+                           
+                        }
+                        if (choice == "Sort Bouclier" && choiceRenégat == 5)
+                        {
+
+
+                        }
+
+                        if (choice == "Riposte" && choiceRenégat == 2)
+                        {
+                            
+
+
+                        }
+                        if (choice == "Riposte" && choiceRenégat == 3)
+                        {
+
+                            
+                        }
+                        if (choice == "Riposte" && choiceRenégat == 4)
+                        {
+                            
+                        }
+                        if (choice == "Sort Bouclier" && choiceRenégat == 5)
+                        {
+
+
+                        }
+                        if(choice == "Hirondelle" && choiceRenégat == 2)
+                        {
+
+                        }
+                        if (choice == "Hirondelle" && choiceRenégat == 3)
+                        {
+
+                        }
+                        if (choice == "Hirondelle" && choiceRenégat == 4)
+                        {
+
+                        }
+                        if (choice == "Hirondelle" && choiceRenégat == 5)
+                        {
+
+                        }
+                        if (choice == "Hirondelle" && choiceRenégat == 6)
+                        {
+
+                        }
+
+
+                    } while (e.PVEdvars != 0 || r.PV != 0);
 
 
                     break;

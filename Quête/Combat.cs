@@ -195,11 +195,11 @@ namespace ProjetNarratif.Quête
 
                     if (brûlure == false)
                     {
-                        Console.WriteLine("Le leshen resta sur ses gardes pret à riposter toutes éevntualité d'attaque de la prt d'edvars.");
+                        Console.WriteLine("Le leshen resta sur ses gardes pret à riposter toutes éventualité d'attaque de la part d'edvars.");
                     }
                     if(brûlure == true) 
                     {
-                        Console.WriteLine("Le leshen resta sur ses gardes pret à riposter toutes éevntualité d'attaque de la prt d'edvars.");
+                        Console.WriteLine("Le leshen resta sur ses gardes pret à riposter toutes éventualité d'attaque de la part d'edvars.");
                         l.PV = l.PV - e.brulureIgnis;
                     }
                 }

@@ -22,6 +22,7 @@ namespace ProjetNarratif.Quête
 
         internal override void ReceiveChoice(string choice, Edvars e)
         {
+           Nécrophages n = new Nécrophages();
            switch(choice)
            {
 
@@ -35,12 +36,170 @@ namespace ProjetNarratif.Quête
                     e.compétences = new CompétenceSacrifice("Mort destinée", @"Edvars à l'aide de sa flamberge libère le pouvoir des ames emprisonner dans son arme,
                     en plongeant l'épée dans le sol pour invoquer une myriade de lames. En plus d'infliger des dégâts immédiats, cette attaque réduit la défense de la cible pendant un instant.", 20);
                     Console.WriteLine($"Vous apprenez une nouvelle compétence Mort destinée : {e.compétences} ");
+                    Thread.Sleep(2000);
+
+                    do
+                    {
+
+                        string AttaqueEdvars = "";
+                        Console.WriteLine("Que voulez-vous faire ?[Attaque],[Sort Bouclier],[Riposte],[Hirondelle]");
+                        if (choice == "Attaque")
+                        {
+                            Console.WriteLine("Que voulez-vous faire ?[Coupépée],[Mort destinée]");
+                            AttaqueEdvars = Convert.ToString(Console.ReadLine());
+                        }
+
+                        int choicenécrophages = new Random().Next(2, 6);//changer
+                                                                    //2 = défense
+                                                                    //3 = Attaque
+                                                                    //4 = sort
+                                                                    //5 = riposte
+
+                        if (choice == "Attaque" && choicenécrophages == 2)
+                        {
+                            if (choice == "Coupépée")
+                            {
+
+
+                            }
+                            if (choice == "Mort destinée")
+                            {
+
+                            }
+
+
+                        }
+                        if (choice == "Attaque" && choicenécrophages == 3)
+                        {
+                            if (choice == "Coupépée")
+                            {
+
+                            }
+                            if (choice == "Mort destinée")
+                            {
+
+                            }
+
+                        }
+                        if (choice == "Attaque" && choicenécrophages == 4)
+                        {
+                            if (choice == "Coupépée")
+                            {
+
+                            }
+                            if (choice == "Mort destinée")
+                            {
+
+                            }
+
+
+                        }
+                        if (choice == "Attaque" && choicenécrophages == 5)
+                        {
+                            if (choice == "Coupépée")
+                            {
+
+                            }
+                            if (choice == "Mort destinée")
+                            {
+
+                            }
+
+
+                        }
+
+                        if (choice == "Sort Bouclier" && choicenécrophages == 2)
+                        {
+
+
+                        }
+                        if (choice == "Sort Bouclier" && choicenécrophages == 3)
+                        {
+
+
+                        }
+                        if (choice == "Sort Bouclier" && choicenécrophages == 4)
+                        {
+
+
+                        }
+                        if (choice == "Sort Bouclier" && choicenécrophages == 5)
+                        {
+
+
+                        }
+
+                        if (choice == "Riposte" && choicenécrophages == 2)
+                        {
+
+
+
+                        }
+                        if (choice == "Riposte" && choicenécrophages == 3)
+                        {
+
+
+                        }
+                        if (choice == "Riposte" && choicenécrophages == 4)
+                        {
+
+                        }
+                        if (choice == "Sort Bouclier" && choicenécrophages == 5)
+                        {
+
+
+                        }
+                        if (choice == "Hirondelle" && choicenécrophages == 2)
+                        {
+
+                        }
+                        if (choice == "Hirondelle" && choicenécrophages == 3)
+                        {
+
+                        }
+                        if (choice == "Hirondelle" && choicenécrophages == 4)
+                        {
+
+                        }
+                        if (choice == "Hirondelle" && choicenécrophages == 5)
+                        {
+
+                        }
+                        if (choice == "Hirondelle" && choicenécrophages == 6)
+                        {
+
+                        }
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    } while (e.PVEdvars != 0 || n.PV != 0);
 
                     break;
 

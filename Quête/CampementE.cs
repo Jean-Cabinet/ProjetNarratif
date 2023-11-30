@@ -21,7 +21,7 @@ namespace ProjetNarratif.Quête
 
         internal override void ReceiveChoice(string choice, Edvars e)
         {
-            Renégat r = new Renégat();
+            Chasseur r = new Chasseur();
 
             switch (choice)
             {
@@ -57,26 +57,34 @@ namespace ProjetNarratif.Quête
 
                         }
 
-                        int choiceRenégat = new Random().Next(2, 6);//changer
+                        int choiceChasseur = new Random().Next(2, 6);//changer
                                                                    //2 = défense
                                                                    //3 = Attaque
                                                                    //4 = sort
                                                                    //5 = riposte
 
-                        if (choice == "Attaque" && choiceRenégat == 2)
+                        if (choice == "Attaque" && choiceChasseur == 2)
                         {
                            if (choice == "Coupépée")
                            {
+                                Console.WriteLine("Edvars s'élança l'épée dans les deux mains pour attaquer le renégat");
+                                Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
+                                Console.WriteLine("Le renégat esquiva son coup avec facilité.");
+
+
+
 
                            }
                            if (choice == "Jugement destinée")
                            {
+                                Console.WriteLine("L'épée d'edvars s'illumina, à deux mains, il fit   ");
+
 
                            }
 
 
                         }
-                        if (choice == "Attaque" && choiceRenégat == 3)
+                        if (choice == "Attaque" && choiceChasseur == 3)
                         {
                             if (choice == "Coupépée")
                             {
@@ -88,20 +96,7 @@ namespace ProjetNarratif.Quête
                             }
 
                         }
-                        if (choice == "Attaque" && choiceRenégat == 4)
-                        {
-                            if (choice == "Coupépée")
-                            {
-
-                            }
-                            if (choice == "Jugement destinée")
-                            {
-
-                            }
-
-
-                        }
-                        if (choice == "Attaque" && choiceRenégat == 5)
+                        if (choice == "Attaque" && choiceChasseur == 4)
                         {
                             if (choice == "Coupépée")
                             {
@@ -114,8 +109,21 @@ namespace ProjetNarratif.Quête
 
 
                         }
+                        if (choice == "Attaque" && choiceChasseur == 5)
+                        {
+                            if (choice == "Coupépée")
+                            {
 
-                        if (choice == "Defense" && choiceRenégat == 2)
+                            }
+                            if (choice == "Jugement destinée")
+                            {
+
+                            }
+
+
+                        }
+
+                        if (choice == "Defense" && choiceChasseur == 2)
                         {
                             if (choice == "sort Bouclier")
                             {
@@ -128,7 +136,7 @@ namespace ProjetNarratif.Quête
 
 
                         }
-                        if (choice == "Defense" && choiceRenégat == 3)
+                        if (choice == "Defense" && choiceChasseur == 3)
                         {
                             if (choice == "sort Bouclier")
                             {
@@ -141,7 +149,7 @@ namespace ProjetNarratif.Quête
 
 
                         }
-                        if (choice == "Defense" && choiceRenégat == 4)
+                        if (choice == "Defense" && choiceChasseur == 4)
                         {
                             if (choice == "sort Bouclier")
                             {
@@ -154,7 +162,7 @@ namespace ProjetNarratif.Quête
 
 
                         }
-                        if (choice == "Defense" && choiceRenégat == 5)
+                        if (choice == "Defense" && choiceChasseur == 5)
                         {
                             if (choice == "sort Bouclier")
                             {
@@ -168,39 +176,39 @@ namespace ProjetNarratif.Quête
 
                         }
 
-                        if (choice == "Riposte" && choiceRenégat == 2)
+                        if (choice == "Riposte" && choiceChasseur == 2)
                         {
                             
 
 
                         }
-                        if (choice == "Riposte" && choiceRenégat == 3)
+                        if (choice == "Riposte" && choiceChasseur == 3)
                         {
 
                             
                         }
-                        if (choice == "Riposte" && choiceRenégat == 4)
+                        if (choice == "Riposte" && choiceChasseur == 4)
                         {
                             
                         }
-                        if (choice == "Riposte" && choiceRenégat == 5)
+                        if (choice == "Riposte" && choiceChasseur == 5)
                         {
 
 
                         }
-                        if(choice == "Hirondelle" && choiceRenégat == 2)
+                        if(choice == "Hirondelle" && choiceChasseur == 2)
                         {
 
                         }
-                        if (choice == "Hirondelle" && choiceRenégat == 3)
+                        if (choice == "Hirondelle" && choiceChasseur == 3)
                         {
 
                         }
-                        if (choice == "Hirondelle" && choiceRenégat == 4)
+                        if (choice == "Hirondelle" && choiceChasseur == 4)
                         {
 
                         }
-                        if (choice == "Hirondelle" && choiceRenégat == 5)
+                        if (choice == "Hirondelle" && choiceChasseur == 5)
                         {
 
                         }

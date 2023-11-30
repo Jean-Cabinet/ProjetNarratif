@@ -310,17 +310,42 @@ namespace ProjetNarratif.Quête
 
         }
 
-        public void niveauxsacrifice(Ennemis E)
+        public void niveauxsacrifice(Ennemis E,Edvars C,Leshen L)
         {
             
-          //  if ()
-               {
+          if (E.PV == 0)
+          {
+                C.PointexperienceSacrifice = C.PointexperienceSacrifice + 10;
+            }
+          if(L.PV == 0)
+          {
+                C.PointexperienceSacrifice = C.PointexperienceSacrifice + 100;
+                C.levelSacrifice = C.levelSacrifice + 1;
+                Console.WriteLine($"Vous etes monté niveau {C.levelSacrifice}");
 
-               }
+          }
 
 
         }
 
+        public void niveauxepargner(Ennemis E, Edvars C, Leshen L)
+        {
+
+            if (E.PV == 0)
+            {
+                C.PointexperienceEpargner = C.PointexperienceEpargner + E.expérience;
+                Console.WriteLine($"Vous avez gagner {E.expérience}");
+            }
+            if (L.PV == 0)
+            {
+                C.PointexperienceEpargner = C.PointexperienceEpargner + 100;
+                C.levelEpargner = C.levelEpargner + 1;
+                Console.WriteLine($"Vous etes monté niveau {C.levelEpargner}");
+
+            }
+
+
+        }
 
 
 

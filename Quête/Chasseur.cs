@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Quête
 {
-    internal class Renégat : Ennemis
+    internal class Chasseur : Ennemis
     {
 
-        public Renégat() 
+        public Chasseur() 
         {
 
             this.PV = 20;

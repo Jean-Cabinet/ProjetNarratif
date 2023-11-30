@@ -44,11 +44,17 @@ namespace ProjetNarratif.Quête
 
                         
                         string AttaqueEdvars = "";
-                        Console.WriteLine("Que voulez-vous faire ?[Attaque],[Sort Bouclier],[Riposte],[Hirondelle]");
+                        string DéfenseEdvars = "";
+                        Console.WriteLine("Que voulez-vous faire ?[Attaque],[Défense],[Riposte],[Hirondelle]");
                         if (choice == "Attaque")
                         {
                             Console.WriteLine("Que voulez-vous faire ?[Coupépée],[Jugement destinée]");
                             AttaqueEdvars = Convert.ToString(Console.ReadLine());
+                        }
+                        if(choice == "défense")
+                        {
+                            Console.WriteLine("Que voulez-vous faire ?[sort Bouclier],[Roulade]");
+
                         }
 
                         int choiceRenégat = new Random().Next(2, 6);//changer
@@ -109,23 +115,55 @@ namespace ProjetNarratif.Quête
 
                         }
 
-                        if (choice == "Sort Bouclier" && choiceRenégat == 2)
+                        if (choice == "Defense" && choiceRenégat == 2)
                         {
-                            
+                            if (choice == "sort Bouclier")
+                            {
+
+                            }
+                            if (choice == "roulade")
+                            {
+
+                            }
+
 
                         }
-                        if (choice == "Sort Bouclier" && choiceRenégat == 3)
+                        if (choice == "Defense" && choiceRenégat == 3)
                         {
+                            if (choice == "sort Bouclier")
+                            {
 
-                            
-                        }
-                        if (choice == "Sort Bouclier" && choiceRenégat == 4)
-                        {
+                            }
+                            if (choice == "roulade")
+                            {
 
-                           
+                            }
+
+
                         }
-                        if (choice == "Sort Bouclier" && choiceRenégat == 5)
+                        if (choice == "Defense" && choiceRenégat == 4)
                         {
+                            if (choice == "sort Bouclier")
+                            {
+
+                            }
+                            if (choice == "roulade")
+                            {
+
+                            }
+
+
+                        }
+                        if (choice == "Defense" && choiceRenégat == 5)
+                        {
+                            if (choice == "sort Bouclier")
+                            {
+
+                            }
+                            if (choice == "roulade")
+                            {
+
+                            }
 
 
                         }
@@ -145,7 +183,7 @@ namespace ProjetNarratif.Quête
                         {
                             
                         }
-                        if (choice == "Sort Bouclier" && choiceRenégat == 5)
+                        if (choice == "Riposte" && choiceRenégat == 5)
                         {
 
 
@@ -166,11 +204,7 @@ namespace ProjetNarratif.Quête
                         {
 
                         }
-                        if (choice == "Hirondelle" && choiceRenégat == 6)
-                        {
-
-                        }
-
+                       
 
                     } while (e.PVEdvars != 0 || r.PV != 0);
 

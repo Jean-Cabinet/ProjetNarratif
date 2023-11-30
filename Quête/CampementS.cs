@@ -42,14 +42,20 @@ namespace ProjetNarratif.Quête
                     {
 
                         string AttaqueEdvars = "";
-                        Console.WriteLine("Que voulez-vous faire ?[Attaque],[Sort Bouclier],[Riposte],[Hirondelle]");
+                        string DéfenseEdvars = "";
+                        Console.WriteLine("Que voulez-vous faire ?[Attaque],[Defense],[Riposte],[Hirondelle]");
                         if (choice == "Attaque")
                         {
                             Console.WriteLine("Que voulez-vous faire ?[Coupépée],[Mort destinée]");
                             AttaqueEdvars = Convert.ToString(Console.ReadLine());
                         }
+                        if (choice == "défense")
+                        {
+                            Console.WriteLine("Que voulez-vous faire ?[sort Bouclier],[Roulade]");
 
-                        int choicenécrophages = new Random().Next(2, 6);//changer
+                        }
+
+                        int choicenécrophages = new Random().Next(2, 6);
                                                                     //2 = défense
                                                                     //3 = Attaque
                                                                     //4 = sort
@@ -108,23 +114,54 @@ namespace ProjetNarratif.Quête
 
                         }
 
-                        if (choice == "Sort Bouclier" && choicenécrophages == 2)
+                        if (choice == "Defense" && choicenécrophages == 2)
                         {
+                            if (choice == "sort Bouclier")
+                            {
+
+                            }
+                            if (choice == "roulade")
+                            {
+
+                            }
 
 
                         }
-                        if (choice == "Sort Bouclier" && choicenécrophages == 3)
+                        if (choice == "Defense" && choicenécrophages == 3)
                         {
+                            if (choice == "sort Bouclier")
+                            {
+
+                            }
+                            if (choice == "roulade")
+                            {
+
+                            }
+
+                        }
+                        if (choice == "Defense" && choicenécrophages == 4)
+                        {
+                            if (choice == "sort Bouclier")
+                            {
+
+                            }
+                            if (choice == "roulade")
+                            {
+
+                            }
 
 
                         }
-                        if (choice == "Sort Bouclier" && choicenécrophages == 4)
+                        if (choice == "Defense" && choicenécrophages == 5)
                         {
+                            if (choice == "sort Bouclier")
+                            {
 
+                            }
+                            if (choice == "roulade")
+                            {
 
-                        }
-                        if (choice == "Sort Bouclier" && choicenécrophages == 5)
-                        {
+                            }
 
 
                         }
@@ -144,7 +181,7 @@ namespace ProjetNarratif.Quête
                         {
 
                         }
-                        if (choice == "Sort Bouclier" && choicenécrophages == 5)
+                        if (choice == "Defense" && choicenécrophages == 5)
                         {
 
 
@@ -169,32 +206,6 @@ namespace ProjetNarratif.Quête
                         {
 
                         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

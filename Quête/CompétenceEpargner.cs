@@ -19,7 +19,7 @@ namespace ProjetNarratif.Quête
 
         public void Éxecuter(Ennemis E, Edvars C)
         {
-            Console.WriteLine("Edvars");
+            this.attaquecomp = 20;   
             E.PV = E.PV - this.attaquecomp;
             C.défenseEdvars = C.défenseEdvars + 20;
 

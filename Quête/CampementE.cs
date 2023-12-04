@@ -98,7 +98,7 @@ namespace ProjetNarratif.Quête
 
                             if (choice == "Coupépée")
                             {
-                                Console.WriteLine("Edvars s'élança la flamberge dans les deux mains pour attaquer le renégat");
+                                Console.WriteLine("Edvars s'élança la flamberge dans les deux mains pour attaquer le chasseur");
                                 Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                                 Console.WriteLine("Le chasseur armé de son arc, tira une flèche qui se divisa en trois flèches ");
                                 Console.WriteLine("Edvars se prit 2 fléches lors de son assaut mais déterminé à asséner son coup, il ignora la douleur. Surprenant le chasseur, il réussi à asséner son coup");
@@ -107,9 +107,6 @@ namespace ProjetNarratif.Quête
 
 
                             }
-
-
-
                             if (choice == "Jugement destinée")
                             {
 
@@ -117,8 +114,8 @@ namespace ProjetNarratif.Quête
                                 Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                                 Console.WriteLine("Le chasseur armé de son arc, tira une flèche qui se divisa en trois flèches ");
                                 Console.WriteLine("Edvars se prit 2 fléches lors de son assaut mais déterminé à asséner son coup, il ignora la douleur.");
-                                Console.WriteLine(@"Edvars toucha une premier fois le chasseur avec le bout de sa lame, il profita par la suite pour planter son épée dans le sol
-                                pour faire apparaitre le la myriade de lame. Le chasseur se prit la compétences d'edvars de plein fouet, il fut populser dans les airs.");
+                                Console.WriteLine(@"Edvars toucha une premier fois le chasseur avec le bout de sa lame, il  en profita par la suite pour planter son épée dans le sol
+                                pour faire apparaitre la myriade de lame. Le chasseur se prit la compétences d'edvars de plein fouet, il fut propulser dans les airs.");
                                 e.PVEdvars = e.PVEdvars - (ch.attaque - e.défenseEdvars);
                                 e.compétences.Éxecuter(ch, e);
 

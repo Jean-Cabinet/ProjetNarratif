@@ -55,7 +55,7 @@ namespace ProjetNarratif.Quête
                         if (choice == "défense")
                         {
                             Console.WriteLine("Que voulez-vous faire ?[sort Bouclier],[Roulade]");
-
+                            DéfenseEdvars = Convert.ToString(Console.ReadLine());
                         }
 
                         int choicenécrophages = new Random().Next(2, 6);
@@ -68,11 +68,18 @@ namespace ProjetNarratif.Quête
                         {
                             if (choice == "Coupépée")
                             {
-
+                                Console.WriteLine("Edvars s'élança l'épée dans les deux mains pour attaquer les barguests");
+                                Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
+                                Console.WriteLine("Les barguests esquivèrent son coup avec facilité.");
 
                             }
                             if (choice == "Mort destinée")
                             {
+                                Console.WriteLine(@"L'épée d'edvars s'illumina, à deux mains, il fit un premier un coup de haut en bas pour trancher les barguests, puis dans une rapidité déconsertante
+                                 planta son arme dans le sol, une myraide de lames tournoyait tout autour de lui");
+                                Console.WriteLine(" les barguests esquiva l'attaque de justesse.");
+                                Console.WriteLine("Votre défense augmente significativement");
+                                n.défense = n.défense  - 10;
 
                             }
 
@@ -82,10 +89,27 @@ namespace ProjetNarratif.Quête
                         {
                             if (choice == "Coupépée")
                             {
+                                Console.WriteLine("Edvars s'élança la flamberge dans les deux mains pour attaquer les barguests");
+                                Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
+                                Console.WriteLine("les deux bargests s'élança à leur tour, pour mordre edvars");
+                                Console.WriteLine("Edvars se fit mordre au molet droit lors de son assaut mais déterminé à asséner son coup, il ignora la douleur. Surprenant les barguests, il réussi à asséner son coup");
+                                e.PVEdvars = e.PVEdvars - (n.attaque - e.défenseEdvars);
+                                n.PV = n.PV - (e.AttaqueGwynbleidd - n.défense);
+
+
+
 
                             }
                             if (choice == "Mort destinée")
                             {
+                                Console.WriteLine("Gwynbleiff s'illumina, edvars coura avec un rapidité sans précéedente pour atteindre sa cible");
+                                Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
+                                Console.WriteLine("les deux bargests s'élança à leur tour, pour mordre edvars");
+                                Console.WriteLine("Edvars se fit mordre au molet droit lors de son assaut mais déterminé à asséner son coup, il ignora la douleur.");
+                                Console.WriteLine(@"Edvars toucha une premier fois un des bargests avec le bout de sa lame, il en profita par la suite pour planter son épée dans le sol
+                                pour faire apparaitre  la myriade de lame. Les deux bargest se prirent la compétences d'edvars de plein fouet, ils furent populser dans les airs.");
+                                e.PVEdvars = e.PVEdvars - (n.attaque - e.défenseEdvars);
+                                e.compétences.Éxecuter(n, e);
 
                             }
 
@@ -94,13 +118,32 @@ namespace ProjetNarratif.Quête
                         {
                             if (choice == "Coupépée")
                             {
+                                Console.WriteLine("Edvars s'élança la flamberge dans les deux mains pour attaquer le renégat");
+                                Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
+                                Console.WriteLine("Les bargests  se mirent en position pour cracher un souffle pestilentiel, pouvant provoquer une nécrose de l'intérieur");
+                                Console.WriteLine("Edvars retenit son souffle malgré la douleur, il ignora la douleur. Surprenant le chasseur, il réussi à asséner son coup");
+                                Console.WriteLine("Edavrs subit la nécrose de l'attaque");
+                                e.PVEdvars = e.PVEdvars - (n.soufflepesti - e.défenseEdvars);
+                                n.PV = n.PV - (e.AttaqueGwynbleidd - n.défense);
+                                e.PVEdvars = e.PVEdvars - n.nécrose;
 
                             }
                             if (choice == "Mort destinée")
                             {
+                                Console.WriteLine("Gwynbleiff se transforma en une lame sombre, edvars coura avec un rapidité sans précédente pour atteindre sa cible");
+                                Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
+                                Console.WriteLine("Les bargests se mirent en position pour cracher un souffle pestilentiel, pouvant provoquer une nécrose de l'intérieur");
+                                Console.WriteLine("Edvars retenit son souffle malgré la douleur, il ignora la douleur.");
+                                Console.WriteLine(@"Edvars toucha une premier fois un des bargests avec le bout de sa lame, il en profita par la suite pour planter son épée dans le sol
+                                pour faire apparaitre  la myriade de lame. Les deux bargest se prirent la compétences d'edvars de plein fouet, ils furent populser dans les airs.");
+                                Console.WriteLine("Edavrs subit les brulures de ces flammes qui malgré la flèche retirer des plaies, le feu ccontinuai de bruler sa chair.");
+                                e.PVEdvars = e.PVEdvars - n.soufflepesti;
+                                e.PVEdvars = e.PVEdvars - n.nécrose;
+                                e.compétences.Éxecuter(n, e);
+
+
 
                             }
-
 
                         }
                         if (choice == "Attaque" && choicenécrophages == 5)

@@ -23,11 +23,11 @@ namespace ProjetNarratif.Quête
         internal override void ReceiveChoice(string choice, Edvars e)
         {
             Chasseur ch = new Chasseur();
-              
+
 
             switch (choice)
             {
-               
+
                 case "combat":
 
                     e.levelEpargner = e.levelEpargner + 1;
@@ -55,23 +55,23 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("Que voulez-vous faire ?[Coupépée],[Jugement destinée]");
                             AttaqueEdvars = Convert.ToString(Console.ReadLine());
                         }
-                        if(choice == "défense")
+                        if (choice == "défense")
                         {
                             Console.WriteLine("Que voulez-vous faire ?[sort Bouclier],[Roulade]");
                             DéfenseEdvars = Convert.ToString(Console.ReadLine());
                         }
 
                         int choiceChasseur = new Random().Next(2, 6);//changer
-                                                                   //2 = défense
-                                                                   //3 = Attaque
-                                                                   //4 = sort
-                                                                   //5 = riposte
+                                                                     //2 = défense
+                                                                     //3 = Attaque
+                                                                     //4 = sort
+                                                                     //5 = riposte
 
                         if (choice == "Attaque" && choiceChasseur == 2)
                         {
-                           
-                           if (choice == "Coupépée")
-                           {
+
+                            if (choice == "Coupépée")
+                            {
                                 Console.WriteLine("Edvars s'élança l'épée dans les deux mains pour attaquer le chasseur");
                                 Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                                 Console.WriteLine("Le chasseur esquiva son coup avec facilité.");
@@ -79,9 +79,9 @@ namespace ProjetNarratif.Quête
 
 
 
-                           }
-                           if (choice == "Jugement destinée")
-                           {
+                            }
+                            if (choice == "Jugement destinée")
+                            {
                                 Console.WriteLine(@"L'épée d'edvars s'illumina, à deux mains, il fit un premier un coup de haut en bas pour trancher le chasseur, puis dans une rapidité déconsertante
                                  planta son arme dans le sol, une myraide de lames tournoyait tout autour de lui");
                                 Console.WriteLine(" le chasseur esquiva l'attaque de justesse.");
@@ -89,16 +89,13 @@ namespace ProjetNarratif.Quête
                                 e.défenseEdvars = e.défenseEdvars + 20;
 
 
-                           }
+                            }
 
 
                         }
                         if (choice == "Attaque" && choiceChasseur == 3)
-                        {   
-                            if(brulure == false || bouclier == false || compétence == false)
-                            {
+                        {
 
-                            }
                             if (choice == "Coupépée")
                             {
                                 Console.WriteLine("Edvars s'élança la flamberge dans les deux mains pour attaquer le renégat");
@@ -110,9 +107,12 @@ namespace ProjetNarratif.Quête
 
 
                             }
+
+
+
                             if (choice == "Jugement destinée")
                             {
-                                
+
                                 Console.WriteLine("Gwynbleiff s'illumina, edvars coura avec un rapidité sans précéedente pour atteindre sa cible");
                                 Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
                                 Console.WriteLine("Le chasseur armé de son arc, tira une flèche qui se divisa en trois flèches ");
@@ -266,23 +266,34 @@ namespace ProjetNarratif.Quête
                             Console.WriteLine("tout deux restèrent sur ses gardes pret à riposter toutes éventualité d'attaque.");
 
                         }
-                        if(choice == "Hirondelle" && choiceChasseur == 2)
+                        if (choice == "Hirondelle" && choiceChasseur == 2)
                         {
-
+                            Console.WriteLine("Edavrs saisit l'occasion pour boire une hirondelle afin de régénéré ses points et vie te augmenter son nombre maximun");
+                            e.UseHirondelle();
                         }
                         if (choice == "Hirondelle" && choiceChasseur == 3)
                         {
+                            Console.WriteLine("Edvars commença à boire son hirondelle mais le chasseur se mit à l'attaque en lui tirant une volé de flèches");
+                            Console.WriteLine("Edvars esquiva de justesse  les flèches, malgré une  qui lui entailla légèrement le bras");
+                            Console.WriteLine("Edvars buva rapidement sa potion pour poursuivre l'attque");
+                            e.UseHirondelle();
 
                         }
                         if (choice == "Hirondelle" && choiceChasseur == 4)
                         {
+                            Console.WriteLine("Edvars commença à boire son hirondelle mais le chasseur se mit à l'attaque en lui tirant une volé de flèches enflammé");
+                            Console.WriteLine("Edvars esquiva de justesse  les flèches, malgré une  qui lui entailla légèrement le bras");
+                            Console.WriteLine("Edvars buva rapidement sa potion pour poursuivre l'attaque");
+                            e.UseHirondelle();
 
                         }
                         if (choice == "Hirondelle" && choiceChasseur == 5)
                         {
+                            Console.WriteLine("Edavrs saisit l'occasion pour boire une hirondelle afin de régénéré ses points et vie te augmenter son nombre maximun");
+                            e.UseHirondelle();
 
                         }
-                       
+
 
                     } while (e.PVEdvars != 0 || ch.PV != 0);
 

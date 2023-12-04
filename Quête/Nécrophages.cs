@@ -15,6 +15,7 @@ namespace ProjetNarratif.Quête
             this.PV = 20;
             this.attaque = 5;
             this.expérience = 10;
+            this.riposte = 10;
 
         }
 

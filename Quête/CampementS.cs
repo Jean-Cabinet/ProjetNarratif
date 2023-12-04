@@ -41,6 +41,9 @@ namespace ProjetNarratif.Quête
                     do
                     {
 
+                        bool brulure = false;
+                        bool bouclier = false;
+                        bool compétence = false;
                         string AttaqueEdvars = "";
                         string DéfenseEdvars = "";
                         Console.WriteLine("Que voulez-vous faire ?[Attaque],[Defense],[Riposte],[Hirondelle]");

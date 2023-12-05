@@ -135,13 +135,11 @@ namespace ProjetNarratif.Quête
                                 Console.WriteLine("Les bargests se mirent en position pour cracher un souffle pestilentiel, pouvant provoquer une nécrose de l'intérieur");
                                 Console.WriteLine("Edvars retenit son souffle malgré la douleur, il ignora la douleur.");
                                 Console.WriteLine(@"Edvars toucha une premier fois un des bargests avec le bout de sa lame, il en profita par la suite pour planter son épée dans le sol
-                                pour faire apparaitre  la myriade de lame. Les deux bargest se prirent la compétences d'edvars de plein fouet, ils furent populser dans les airs.");
-                                Console.WriteLine("Edavrs subit les brulures de ces flammes qui malgré la flèche retirer des plaies, le feu ccontinuai de bruler sa chair.");
+                                pour faire apparaitre la myriade de lame. Les deux bargest se prirent la compétences d'edvars de plein fouet, ils furent populser dans les airs.");
+                                Console.WriteLine("Edvars subit la nécrose de l'attaque");
                                 e.PVEdvars = e.PVEdvars - n.soufflepesti;
                                 e.PVEdvars = e.PVEdvars - n.nécrose;
                                 e.compétences.Éxecuter(n, e);
-
-
 
                             }
 
@@ -150,25 +148,33 @@ namespace ProjetNarratif.Quête
                         {
                             if (choice == "Coupépée")
                             {
-
+                                Console.WriteLine("Edvars s'élança la flamberge dans les deux mains pour attaquer les deux bargests");
+                                Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
+                                Console.WriteLine("Edvars arriva à portée pour asséner son coup");
+                                Console.WriteLine("les bargests esquivèrent avec rapidité et répliquèrent avec une morsure purtéfiante dans le flanc");
+                                e.PVEdvars = e.PVEdvars - n.riposte;
                             }
                             if (choice == "Mort destinée")
                             {
-
+                                Console.WriteLine("Gwynbleiff se transforma en une lame sombre, edvars coura avec un rapidité sans précédente pour atteindre sa cible");
+                                Console.WriteLine("Edvars de Ragn - AHHHHHHHHHH");
+                                Console.WriteLine("Edvars arriva à portée pour asséner son coup, les bargests esquivèrent le premier coup");
+                                Console.WriteLine("Edvars continua l'assaut en sautant dans sa direction pour planter sa flamberge dans le sol");
+                                Console.WriteLine("les bargests esquivèrent en attaquant sur chacun des cotée d'edvars.");
+                                e.PVEdvars = e.PVEdvars - n.riposte;
                             }
-
-
                         }
 
                         if (choice == "Defense" && choicenécrophages == 2)
                         {
                             if (choice == "sort Bouclier")
                             {
+                                Console.WriteLine("Edvars et les bargest se regardèrent dans le blanc des yeux attendant que l'un face le premier pas");
 
                             }
                             if (choice == "roulade")
                             {
-
+                                Console.WriteLine("Edvars fit une roulade en pensant que les bargests allait attaquer");
                             }
 
 
@@ -177,11 +183,14 @@ namespace ProjetNarratif.Quête
                         {
                             if (choice == "sort Bouclier")
                             {
+                                Console.WriteLine("Le bouclier d'edvars absorba les attaques des bargests, sans aucun problème");
+                                e.absorptionquen = e.absorptionquen - n.attaque;
+                                Console.WriteLine($"Votre bouclier peut absorber {e.absorptionquen}");
 
                             }
                             if (choice == "roulade")
                             {
-
+                                Console.WriteLine("Edvars fit une roulade pour esquiver les attaques des bargests");
                             }
 
                         }
@@ -189,11 +198,14 @@ namespace ProjetNarratif.Quête
                         {
                             if (choice == "sort Bouclier")
                             {
+                                Console.WriteLine("Le bouclier d'edvars absorba les attaques des bargests, sans aucun problème");
+                                e.absorptionquen = e.absorptionquen - n.attaque;
+                                Console.WriteLine($"Votre bouclier peut absorber {e.absorptionquen}");
 
                             }
                             if (choice == "roulade")
                             {
-
+                                Console.WriteLine("Edvars fit une roulade pour esquiver la volée de flèche du chasseur");
                             }
 
 
@@ -202,11 +214,11 @@ namespace ProjetNarratif.Quête
                         {
                             if (choice == "sort Bouclier")
                             {
-
+                                Console.WriteLine("Les bargests restèrent sur leur gardes pret à riposter toutes éventualité d'attaque de la part d'edvars.");
                             }
                             if (choice == "roulade")
                             {
-
+                                Console.WriteLine("Les bargests resta sur ses gardes pret à riposter toutes éventualité d'attaque de la part d'edvars.Edvars fit une roulade de peur d'une représaille");
                             }
 
 
@@ -214,47 +226,54 @@ namespace ProjetNarratif.Quête
 
                         if (choice == "Riposte" && choicenécrophages == 2)
                         {
-
-
-
+                            Console.WriteLine("Edvars observa chaque recoin, chaque mouvement pour espérer enterevoir une opportunité de riposté, mais les bargests restèrent sur la défensive");
                         }
                         if (choice == "Riposte" && choicenécrophages == 3)
                         {
-
+                            Console.WriteLine("Edvars vit avec rapidité l'attaque des bargests, puis avec agilité, il esquiva pour se replacer et asséner un coup d'épée dans la gueule putréfié des bargests");
+                            n.PV = n.PV - e.riposteEdvars;
 
                         }
                         if (choice == "Riposte" && choicenécrophages == 4)
                         {
+                            Console.WriteLine("Edvars vit avec rapidité l'attaque des bargests, puis avec agilité, il esquiva pour se replacer et asséner un coup d'épée dans la gueule putréfié des bargests");
+                            n.PV = n.PV - e.riposteEdvars;
 
                         }
-                        if (choice == "Defense" && choicenécrophages == 5)
+                        if (choice == "Riposte" && choicenécrophages == 5)
                         {
-
+                            Console.WriteLine("tout restèrent sur leur gardes pret à riposter toutes éventualité d'attaque.");
 
                         }
                         if (choice == "Hirondelle" && choicenécrophages == 2)
                         {
+                            Console.WriteLine("Edvars saisit l'occasion pour boire une hirondelle afin de régénéré ses points et vie te augmenter son nombre maximun");
+                            e.UseHirondelle();
 
                         }
                         if (choice == "Hirondelle" && choicenécrophages == 3)
                         {
+                            Console.WriteLine("Edvars commença à boire son hirondelle mais les bargests se mirent à l'attaque en courant sur edvars pour le mordrent");
+                            Console.WriteLine("Edvars esquiva de justesse  les bargests.");
+                            Console.WriteLine("Edvars buva rapidement sa potion pour poursuivre l'attaque");
+                            e.UseHirondelle();
 
                         }
                         if (choice == "Hirondelle" && choicenécrophages == 4)
                         {
+                            Console.WriteLine("Edvars commença à boire son hirondelle mais les bargests se mirent à l'attaque en crachant un souffle péstilentiel");
+                            Console.WriteLine("Edvars esquiva de justesse  les flèches, malgré une lègère respiration, il sentit des brulures à l'intérieur de son corps.");
+                            Console.WriteLine("Edvars buva rapidement sa potion pour poursuivre l'attaque");
+                            e.UseHirondelle();
 
                         }
                         if (choice == "Hirondelle" && choicenécrophages == 5)
                         {
+                            Console.WriteLine("Edavrs saisit l'occasion pour boire une hirondelle afin de régénéré ses points et vie te augmenter son nombre maximun");
+                            e.UseHirondelle();
 
                         }
-                        if (choice == "Hirondelle" && choicenécrophages == 6)
-                        {
-
-                        }
-
-
-
+                        
 
                     } while (e.PVEdvars != 0 || n.PV != 0);
 

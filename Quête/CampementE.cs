@@ -248,7 +248,7 @@ namespace ProjetNarratif.Quête
                         }
                         if (choice == "Riposte" && choiceChasseur == 3)
                         {
-                            Console.WriteLine("Edvars vit avec rapidité l'attaque du chasseur, puis avec agilité, il esquiva pour se replacer et asséner un coup d'épée dans le flan du monstre");
+                            Console.WriteLine("Edvars vit avec rapidité l'attaque du chasseur, puis avec agilité, il esquiva pour se replacer et asséner un coup d'épée dans le flan du chasseur");
                             ch.PV = ch.PV - e.riposteEdvars;
 
 
@@ -265,7 +265,7 @@ namespace ProjetNarratif.Quête
                         }
                         if (choice == "Hirondelle" && choiceChasseur == 2)
                         {
-                            Console.WriteLine("Edavrs saisit l'occasion pour boire une hirondelle afin de régénéré ses points et vie te augmenter son nombre maximun");
+                            Console.WriteLine("Edvars saisit l'occasion pour boire une hirondelle afin de régénéré ses points et vie te augmenter son nombre maximun");
                             e.UseHirondelle();
                         }
                         if (choice == "Hirondelle" && choiceChasseur == 3)

@@ -8,6 +8,9 @@ namespace ProjetNarratif.Quête
 {
     internal class Inventairemarchand
     {
+        public static bool alcahest = false;
+
+        public static bool Mandragore = false;
 
         public List<Item> inventairemarchand = new();
 
@@ -19,6 +22,19 @@ namespace ProjetNarratif.Quête
         public void Add(Item item)
         {
             inventairemarchand.Add(item);
+        }
+
+        public void Sub(Item item, Alcahest A, Mandragore M , Marchand MC)
+        {
+            if(alcahest == true)
+            {
+
+            }
+            if (Mandragore == true)
+            {
+
+            }
+
         }
 
         public void SubA(Item item,Alcahest A, Marchand M)

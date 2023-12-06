@@ -35,6 +35,7 @@ namespace ProjetNarratif.Quête
                     switch (réponse)
                     {
                         case "alcahest":
+                            Inventairemarchand.alcahest = true;
                             Console.WriteLine("Edvars de Ragn - très bien, je vais vous prendre vos deux alcahest ");
                             Console.WriteLine("Marchand - Pas de problème, ceci vous fera 10 florins");
                             e.AchatA(A,e);

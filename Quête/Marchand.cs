@@ -15,8 +15,13 @@ namespace ProjetNarratif.Quête
         { 
             this.bourse = 150;
             this.inventairemarchand = new Inventairemarchand();
+            this.inventairemarchand.Add(new Mandragore("Mandragore","plante",2,10));
+            this.inventairemarchand.Add(new Alcahest("Alcahest", "alcool", 2,5));
 
         }   
+
+
+        
 
 
 

@@ -28,6 +28,8 @@ game.Add(new AubergeE());
 game.Add(new AubergeS());
 game.Add(new CampementE());
 game.Add(new CampementS());
+game.Add(new RencontreE());
+game.Add(new RencontreS()); 
 
 while (!game.IsGameOver())
 {

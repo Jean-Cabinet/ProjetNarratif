@@ -277,6 +277,8 @@ namespace ProjetNarratif.Quête
 
                     } while (e.PVEdvars != 0 || n.PV != 0);
 
+                    Game.Transition<RencontreS>();
+
                     break;
 
 

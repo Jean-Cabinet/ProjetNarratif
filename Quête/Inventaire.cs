@@ -29,6 +29,7 @@ namespace ProjetNarratif.Quête
 
         public void See (Item item)
         {
+            Console.WriteLine("Vous possédez dans votre inventaire ces objets : ");
             inventaire.ForEach(i => Console.WriteLine(i.name));
         }
 

@@ -8,7 +8,7 @@ namespace ProjetNarratif.Quête
 {
     internal class CampementE : Quest
     {
-
+        public static Random Random = new Random();
         internal override string CreateDescription() =>
      @"Après c'etre fait expulsé de l'auberge, Edvars cherchait un coin paisible pour dormir à la belle étoile.
        Au bord du feu de camp, Edvars regarda les flammes du feu, repensait à son action et ce que cela impliquait d'etre un renégat. 
@@ -294,7 +294,9 @@ namespace ProjetNarratif.Quête
 
                     } while (e.PVEdvars != 0 || ch.PV != 0);
 
+                    Game.Transition<RencontreE>();
 
+                    
                     break;
 
 

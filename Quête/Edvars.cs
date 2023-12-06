@@ -347,7 +347,25 @@ namespace ProjetNarratif.Quête
 
         }
 
+        public void AchatA(Alcahest A, Edvars C)
+        {
+            Console.WriteLine("Edvars de Ragn - Tenez, les voici");
+            C.Bourse = C.Bourse - A.prix;
+            Console.WriteLine($"Il vous reste maintenant {C.Bourse} florins dans votre bourse");
+        }
+        public void AchatM(Mandragore M, Edvars C)
+        {
+            Console.WriteLine("Edvars de Ragn - Tenez, les voici");
+            C.Bourse = C.Bourse - M.prix;
+            Console.WriteLine($"Il vous reste maintenant {C.Bourse} florins dans votre bourse");
+        }
 
+        public void AchatMA(Mandragore M, Edvars C, Alcahest A)
+        {
+            Console.WriteLine("Edvars de Ragn - Tenez, les voici");
+            C.Bourse = C.Bourse - (M.prix + A.prix);
+            Console.WriteLine($"Il vous reste maintenant {C.Bourse} florins dans votre bourse");
+        }
 
 
 

@@ -8,13 +8,14 @@ namespace ProjetNarratif.Quête
 {
     internal class Mandragore: Item
     {
-        public int nombre {  get; set; }    
+           
 
-        public Mandragore(string name, string type, int nombre) 
+        public Mandragore(string name, string type, int nombre, int prix) 
         { 
-            this.nombre = 3;
+            this.nombre = nombre;
             this.type = type;
             this.name = name;
+            this.prix = prix;
         
         } 
     }

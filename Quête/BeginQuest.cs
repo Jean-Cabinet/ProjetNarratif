@@ -19,7 +19,7 @@ Vous etes un tout nouveaux croiseleurs, vous etes affecté à votre toutes premi
 ///////////////////////////////////////////////////////DÉBUT QUETE/////////////////////////////////////////////////
  Edvard de Ragn- Bonjour, je viens pour le contrat, c'est vous Régisse chèvre ?
  Régisse Chèvre - Casse-toi le monstre !!
- Edvard de Ragn - [menace], [sort], [lui dire bon vent]";
+ Edvard de Ragn - [menace], [sort], [lui dire bon vent], [enigme]";
 
 
         internal override void ReceiveChoice(string choice,Edvars e)
@@ -61,6 +61,13 @@ Vous etes un tout nouveaux croiseleurs, vous etes affecté à votre toutes premi
                     Thread.Sleep(2000);
                     Game.Transition<Prime>();
 
+
+                    break;
+
+                case "enigme":
+
+
+                    Game.Transition<Enigme>();
 
                     break;
 

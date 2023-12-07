@@ -30,6 +30,7 @@ game.Add(new CampementE());
 game.Add(new CampementS());
 game.Add(new RencontreE());
 game.Add(new RencontreS()); 
+game.Add(new Enigme());
 
 while (!game.IsGameOver())
 {

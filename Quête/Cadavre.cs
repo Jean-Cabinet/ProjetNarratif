@@ -11,7 +11,7 @@ namespace ProjetNarratif.Quests
     {
         internal static bool cadavre;
         internal override string CreateDescription() =>
-@" Vous vous approchez pour [examiner le cadavre]
+@" Vous vous approchez pour examiner le [cadavre]
 
 ";
 
@@ -20,7 +20,7 @@ namespace ProjetNarratif.Quests
             switch (choice)
             {      
                    
-                case "examiner le cadavre":
+                case "cadavre":
                     if(cadavre == false)
                     {
                         Console.WriteLine("Edvars de Ragn - hmmm, visiblement mort d'un crise cardiaque et dévorer par les nécrophages au vu des entailles fines et irrégulières.");

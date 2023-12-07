@@ -11,8 +11,8 @@ namespace ProjetNarratif.Quête
 
         public Herboriste() 
         {
-            this.inventairemarchand.Add(new Mandragore("Mandragore","plante",3));
-            this.inventairemarchand.Add(new Alcahest("Alcahest", "alccol", 3));
+            this.inventairemarchand.Add(new Mandragore("Mandragore","plante",3,10));
+            this.inventairemarchand.Add(new Alcahest("Alcahest", "alccol", 3,5));
         
         
         

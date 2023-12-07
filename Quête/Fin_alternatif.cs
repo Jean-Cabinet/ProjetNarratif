@@ -13,11 +13,19 @@ namespace ProjetNarratif.Quête
   @"                                         VOUS ETES MORT
 Edvars avait le présentiment que son erreur dans l'identification du monstre, pourrais lui coter la vie.........
  Je pensais que vous auriez été meilleure.......Ce n'est pas comme ça que vous allez tuer Aldagusar voyons.......
-  reprenons à la page Glossaire et tâchez de bien choisir le Leshen";
-
+  reprenons à la page Glossaire et tâchez de bien choisir le Leshen.[Recommencer]";
+        
         internal override void ReceiveChoice(string choice, Edvars e)
         {
-            Game.Transition<Glossaire>();
+            switch (choice)
+            {
+                case "Recommencer":
+
+                    Game.Transition<Glossaire>();
+
+                    break;
+            }
+            
 
         }
     }
